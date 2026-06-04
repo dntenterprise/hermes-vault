@@ -10,8 +10,11 @@ VAULT LOOKUP MAP:
 System/Assistant/context.md → operations, health, family overview
 System/Assistant/preferences.md → communication style, delivery rules
 System/Assistant/environment.md → hardware, services, known issues
-System/Assistant/MEMORY.md → assistant's procedural knowledge
+System/Assistant/MEMORY.md → assistant's hot procedural knowledge
 System/Assistant/USER.md → user profile (this file)
+System/Assistant/architecture.md → system data flow, three-tier memory
+System/Assistant/maintenance.md → weekly/monthly/breakage routines
+System/Assistant/logs/issues-fixes-log.md → issue tracking
 
 Memory pipeline: MEMORY.md holds hot procedural knowledge.
 Vault living files hold stable reference material.
