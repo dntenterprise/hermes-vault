@@ -1,25 +1,38 @@
----
-tags: [system, assistant, context]
----
+# Assistant — Context
 
-# Context — Hermes Agent System
+Current life situation, health protocols, and active things to track.
+Read when context matters for decisions or advice.
+
+---
 
 ## Operations
-- **Agent system**: Sickan (orchestrator) + Scout, Scribe, Reach, Dev
-- **Platforms**: Telegram (primary), Discord (agent channels)
-- **Dashboard**: [[Work/Business/mission-control|Hermes Mission Control]] — v2.5, port 51763, Tailscale-served
-- **Git repo**: `dntenterprise/hermes-vault` — auto-synced every 10 min
 
-## Active Projects
-- Stockholm lead generation pipeline (daily cron, 08:00 CEST)
-- Multi-agent content pipeline
+- Hermes multi-agent system: Sickan (orchestrator) + Scout, Scribe, Reach, Dev
+- Stockholm lead generation pipeline — daily cron at 08:00 CEST
 - Website sales outreach
+- Multi-agent content pipeline
 
-## Owner
-- **Boss / P** — tech-savvy entrepreneur, Swedish/English
-- Prefers short, direct communication — no filler
-- Runs on Mac, accesses via Telegram + Discord
+## Health
 
-## Location
-- Stockholm area (focused for lead gen)
+- *To be filled in by Boss*
+
+## Family
+
+- *To be filled in by Boss*
+
+## Work Dependencies
+
+- Boss (P) — highest authority, all major decisions
+- Scout — research specialist
+- Scribe — writing & copy
+- Reach — marketing & campaigns
+- Dev — code & builds
+
+## Location & Timezone
+
+- Stockholm area
 - Timezone: CEST (UTC+2)
+
+---
+
+*Last updated: 2026-06-04*
