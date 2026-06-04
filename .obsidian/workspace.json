@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "bfa38d0580f0c459",
+        "id": "2ceacf93ab18700d",
         "type": "tabs",
         "children": [
           {
-            "id": "f699283083941576",
+            "id": "2eee32567dad0a3f",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Ny flik"
+              "icon": "lucide-git-fork",
+              "title": "Grafvy"
             }
           }
         ]
@@ -177,28 +177,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f699283083941576",
+  "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
-    "System/Assistant/maintenance.md",
+    "Daily/2026-06-04.md",
+    "System/Assistant/context.md",
+    "People/MOC.md",
     "System/Assistant/architecture.md",
+    "People/Boss.md",
+    "README.md",
     "System/Assistant/USER.md",
     "System/Assistant/MEMORY.md",
-    "People/Boss.md",
+    "System/Assistant/preferences.md",
+    "System/Assistant/maintenance.md",
     "Work/Business",
     "Work",
     "System/Assistant/logs/issues-fixes-log.md",
-    "System/Assistant/preferences.md",
     "System/Assistant/logs",
     "System/Assistant/environment.md",
-    "System/Assistant/context.md",
     "System/Assistant",
     "System",
     "Personal/Projects",
     "Personal",
-    "People/MOC.md",
     "People",
     "Inbox",
-    "Daily/2026-06-04.md",
     "Daily",
     "test-synkning.md"
   ]
