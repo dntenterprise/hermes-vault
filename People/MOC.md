@@ -19,3 +19,6 @@ Contacts and relationships. Each person gets their own note in this folder.
 ---
 
 *Last updated: 2026-06-04*
+
+## Backlinks
+- [[Daily/2026-06-04]] — vault setup day
