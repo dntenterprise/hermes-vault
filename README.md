@@ -1,26 +1,30 @@
-# Hermes Vault — Obsidian Long-Term Memory
+# Hermes Vault — LLM Wiki
 
-Synkat mellan VPS (Hermes agenter) och lokal Mac via GitHub.
+Persistent, compounding knowledge base. Synkat mellan VPS och Mac via GitHub.
 
-## Struktur
+## Arkitektur (Karpathy LLM Wiki pattern)
 
 ```
 Hermes Vault/
-├── Daily/                    # YYYY-MM-DD.md dagliga anteckningar
-├── System/
-│   └── Assistant/
-│       ├── context.md        # Aktuella projekt & operations
-│       ├── preferences.md    # Kommunikationsstil & regler
-│       └── environment.md    # Hårdvara, tjänster, kända fel
-├── Work/
-│   └── Business/             # Arbetsdokument & affärslogg
-├── Personal/
-│   └── Projects/             # Privata projekt & tracking
-├── People/                   # Kontakter & relationer
-└── Inbox/                    # Oklassificerat — sorteras senare
+├── AGENTS.md          # Schema — definierar struktur, konventioner, workflows (Layer 3)
+├── raw/               # Rådata — immutable sources (Layer 1)
+│   ├── articles/      #   Web articles, blog posts
+│   ├── tiktok/        #   TikTok transcripts/notes
+│   ├── docs/          #   PDFs, documents
+│   └── assets/        #   Images, attachments
+├── wiki/              # LLM-maintained markdown wiki (Layer 2)
+│   ├── index.md       #   Content catalog
+│   ├── log.md         #   Append-only chronological record
+│   ├── entities/      #   People, companies, products
+│   ├── concepts/      #   Ideas, theories, strategies
+│   ├── sources/       #   Source summaries
+│   ├── system/        #   System documentation
+│   └── daily/         #   Daily notes
 ```
 
 ## Regler
-- Daily notes är append-only — radera aldrig
-- Använd wiki-länkar: `[[People/Namn]]`
-- Allt som är oklart hamnar i Inbox/
+- `raw/` = append-only — radera aldrig
+- `wiki/` = LLM äger — skapar, uppdaterar, cross-refererar
+- `AGENTS.md` = gemensam — du och LLM co-evolverar
+- Varje ny källa → ingest workflow → uppdatera index + log
+- Wiki-länkar: `[[wiki/entities/Name]]`
