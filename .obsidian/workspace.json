@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/Trading/Fabio_Valentini_Strategy.md",
+                "file": "wiki/system/MEMORY.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fabio_Valentini_Strategy"
+              "title": "MEMORY"
             }
           }
         ]
@@ -184,7 +184,33 @@
   "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
     "Work/Trading/Fabio_Valentini_Strategy.md",
-    "Work/Trading",
+    "wiki/daily/2026-06-04.md",
+    "wiki/system/preferences.md",
+    "wiki/system/maintenance.md",
+    "wiki/system/issues-fixes-log.md",
+    "wiki/system/environment.md",
+    "wiki/system/context.md",
+    "wiki/system/architecture.md",
+    "wiki/system/USER.md",
+    "wiki/system/MEMORY.md",
+    "wiki/entities/Dino-Valentino.md",
+    "wiki/entities/people-moc.md",
+    "wiki/concepts/fabio-valentini-strategy.md",
+    "wiki/concepts/dropshipping-tools-research.md",
+    "wiki/concepts/cvd-complete-guide.md",
+    "wiki/daily",
+    "wiki/log.md",
+    "wiki/system",
+    "wiki/index.md",
+    "wiki/entities",
+    "wiki/concepts",
+    "wiki",
+    "raw/tiktok",
+    "raw/docs",
+    "raw/assets",
+    "raw/articles",
+    "raw",
+    "AGENTS.md",
     "Daily/2026-06-04.md",
     "System/Assistant/context.md",
     "People/MOC.md",
@@ -192,20 +218,6 @@
     "People/Boss.md",
     "README.md",
     "System/Assistant/USER.md",
-    "System/Assistant/MEMORY.md",
-    "System/Assistant/preferences.md",
-    "System/Assistant/maintenance.md",
-    "Work/Business",
-    "Work",
-    "System/Assistant/logs/issues-fixes-log.md",
-    "System/Assistant/logs",
-    "System/Assistant/environment.md",
-    "System/Assistant",
-    "System",
-    "Personal/Projects",
-    "Personal",
-    "People",
-    "Inbox",
-    "test-synkning.md"
+    "System/Assistant/MEMORY.md"
   ]
 }
