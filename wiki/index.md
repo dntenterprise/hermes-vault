@@ -7,6 +7,7 @@
 | Page | Summary | Sources |
 |------|---------|---------|
 | [[wiki/entities/Dino-Valentino]] | Boss — entrepreneur i Stockholm, dropshipping + trading | 1 |
+| [[wiki/entities/PupRoam]] | Pet travel dropshipping brand — spherical pet bottle, Walk Kit | 1 |
 | [[wiki/entities/people-moc]] | Map of Content — alla personer i vaultet | 1 |
 
 ## Concepts
