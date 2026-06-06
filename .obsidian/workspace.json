@@ -11,10 +11,14 @@
             "id": "2eee32567dad0a3f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Grafvy"
+              "type": "markdown",
+              "state": {
+                "file": "wiki/entities/PupRoam.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "PupRoam"
             }
           }
         ]
