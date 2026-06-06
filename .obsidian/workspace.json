@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "content",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +70,8 @@
               "title": "Bokmärken"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,6 +181,8 @@
   "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
     "wiki/daily/2026-06-04.md",
+    "wiki/entities/PupRoam.md",
+    "wiki/concepts/dropshipping-tools-research.md",
     "wiki/log.md",
     "wiki/system/context.md",
     "wiki/system/USER.md",
@@ -189,10 +192,8 @@
     "wiki/system/environment.md",
     "README.md",
     "wiki/system/preferences.md",
-    "wiki/entities/PupRoam.md",
     "AGENTS.md",
     "wiki/system/MEMORY.md",
-    "wiki/concepts/dropshipping-tools-research.md",
     "wiki/index.md",
     "Work/Trading/Fabio_Valentini_Strategy.md",
     "wiki/system/maintenance.md",
