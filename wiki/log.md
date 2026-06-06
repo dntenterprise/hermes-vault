@@ -23,6 +23,13 @@ updated: 2026-06-06
 - **Lösen** puproam.store: `neunew`
 - Updated: `wiki/entities/PupRoam.md`, `wiki/log.md`
 
+## [2026-06-06] plan | Full PupRoam Marketing Plan
+
+- 13-section AARRR marketing plan generated via `marketing-plan` skill
+- 90-day roadmap: product photos → TikTok/IG → 20 influencer bottles → first UGC
+- Revenue projections (base 15/mo, good 40/mo, great 100/mo)
+- Saved: `marketing-plans/puproam/final_plan.md` + `wiki/entities/PupRoam-marketing.md`
+
 ## [2026-06-06] update | Marketing Skills Pipeline + Self-Commit
 
 43 marketing skills installed from `github.com/coreyhaines31/marketingskills` → `skills/marketing/`
