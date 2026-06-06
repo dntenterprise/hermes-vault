@@ -23,6 +23,13 @@ updated: 2026-06-06
 - **Lösen** puproam.store: `neunew`
 - Updated: `wiki/entities/PupRoam.md`, `wiki/log.md`
 
+## [2026-06-06] update | Marketing Skills Pipeline + Self-Commit
+
+43 marketing skills installed from `github.com/coreyhaines31/marketingskills` → `skills/marketing/`
+- system-coordinator skill patched: agents know which marketing skills to use per role
+- content-pipeline skill patched: delegation context includes skill references
+- Memory updated: self-committing is default behavior, no reminders needed
+
 ## [2026-06-06] pipeline | Full Marketing Pipeline PupRoam 🚀
 
 - **Scout** researched pet travel niche — 11 sources, TikTok trends, competitor analysis, influencer landscape
