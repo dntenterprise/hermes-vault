@@ -29,6 +29,7 @@ updated: 2026-06-06
 - 90-day roadmap: product photos → TikTok/IG → 20 influencer bottles → first UGC
 - Revenue projections (base 15/mo, good 40/mo, great 100/mo)
 - Saved: `marketing-plans/puproam/final_plan.md` + `wiki/entities/PupRoam-marketing.md`
+- **Reach executed:** TikTok/IG content pack, email flows, influencer templates → `content/reach/`
 
 ## [2026-06-06] update | Marketing Skills Pipeline + Self-Commit
 
