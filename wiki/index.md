@@ -1,6 +1,6 @@
 # Index — Hermes Wiki
 
-> Content catalog. Updated on every ingest. Last updated: 2026-06-05.
+> Content catalog. Updated on every ingest. Last updated: 2026-06-06.
 
 ## Entities
 
@@ -30,13 +30,14 @@
 | [[wiki/system/architecture]] | Agent system architecture |
 | [[wiki/system/maintenance]] | Maintenance procedures |
 | [[wiki/system/issues-fixes-log]] | Historical issues & fixes |
+| [[wiki/system/pupram-email-templates]] | 6-mail template system for PupRoam — all customer touchpoints |
 
 ## Sources
 
 | Page | Summary | Type |
 |------|---------|------|
 | [[wiki/daily/2026-06-04]] | Daily note — session recap, tasks | daily |
+| [[wiki/daily/2026-06-06]] | Full marketing pipeline — Scout → Scribe → Reach | daily |
 
 ---
-
-**Pages:** 13 | **Entities:** 2 | **Concepts:** 3 | **System:** 8 | **Sources:** 1
+|**Pages:** 15 | **Entities:** 3 | **Concepts:** 3 | **System:** 9 | **Sources:** 2 |
