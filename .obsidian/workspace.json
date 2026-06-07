@@ -180,6 +180,9 @@
   },
   "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
+    "Skills/crawl4ai-setup.md",
+    "Skills/claude-youtube-skill.md",
+    "Skills",
     "raw/daily/2026-06-07/snapshot-19:44.md",
     "raw/daily/2026-06-07/snapshot-20:44.md",
     "raw/daily/2026-06-07/snapshot-19:24.md",
@@ -216,13 +219,10 @@
     "wiki/index.md",
     "wiki/system/context.md",
     "wiki/daily/2026-06-04.md",
-    "AGENTS.md",
-    "wiki/concepts/dropshipping-tools-research.md",
     "People",
     "wiki/daily",
     "wiki/system",
     "wiki/entities",
-    "wiki/concepts",
-    "wiki"
+    "wiki/concepts"
   ]
 }
