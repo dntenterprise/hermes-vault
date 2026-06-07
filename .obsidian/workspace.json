@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/entities/PupRoam.md",
+                "file": "PupRoam/2026-06-07_marknadsforingsstrategi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PupRoam"
+              "title": "2026-06-07_marknadsforingsstrategi"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "scribe",
+                "query": "marketing-plans/puproam/final_plan.md",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -184,17 +184,20 @@
   },
   "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
+    "wiki/entities/PupRoam-marketing.md",
+    "PupRoam/2026-06-07_marknadsforingsstrategi.md",
+    "PupRoam",
+    "wiki/log.md",
+    "wiki/daily/2026-06-06.md",
     "raw/docs/pupram-email-templates.md",
+    "wiki/entities/PupRoam.md",
     "wiki/system/pupram-email-templates.md",
+    "wiki/system/architecture.md",
     "wiki/index.md",
     "wiki/system/context.md",
-    "wiki/daily/2026-06-06.md",
-    "wiki/system/architecture.md",
     "wiki/system/MEMORY.md",
     "wiki/daily/2026-06-04.md",
     "AGENTS.md",
-    "wiki/log.md",
-    "wiki/entities/PupRoam.md",
     "wiki/concepts/dropshipping-tools-research.md",
     "wiki/system/USER.md",
     "wiki/entities/people-moc.md",
@@ -216,9 +219,6 @@
     "wiki",
     "raw/tiktok",
     "raw/docs",
-    "raw/assets",
-    "raw/articles",
-    "Daily/2026-06-04.md",
-    "System/Assistant/context.md"
+    "raw/assets"
   ]
 }
