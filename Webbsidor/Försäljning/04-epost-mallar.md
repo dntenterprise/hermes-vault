@@ -1,4 +1,5 @@
 # E-postmall — Uppföljning efter samtal eller visning
+# Webbexperten
 
 ---
 
@@ -26,7 +27,7 @@ Jag kan komma förbi med en kopp kaffe och visa några exempel — det tar max 2
 Hör av dig!
 
 Med vänliga hälsningar,
-[Ditt namn]
+Dino
 [Ditt företagsnamn]
 [Telefonnummer]
 [Hemsida]
@@ -60,7 +61,7 @@ När du godkänner kör vi igång direkt. Jag har tid från och med [dag] om du 
 Har du några frågor? Svara bara på det här mejlet!
 
 Med vänliga hälsningar,
-[Ditt namn]
+Dino
 [Telefonnummer]
 
 ---
@@ -78,7 +79,7 @@ Om du har några frågor eller vill justera något i paketet så är det bara at
 Svarar du på det här mejlet så fixar jag det snabbast!
 
 Med vänliga hälsningar,
-[Ditt namn]
+Dino
 
 ---
 
@@ -95,7 +96,7 @@ Om läget förändras — oavsett om det är om 3 månader eller 3 år — är d
 Önskar dig en riktigt bra sommar/vinter!
 
 Med vänliga hälsningar,
-[Ditt namn]
+Dino
 
 ---
 
@@ -122,7 +123,7 @@ Har du frågor under resans gång? Släng iväg ett mejl eller ring mig direkt p
 Vi ses på webben! 🚀
 
 Med vänliga hälsningar,
-[Ditt namn]
+Dino
 
 ---
 

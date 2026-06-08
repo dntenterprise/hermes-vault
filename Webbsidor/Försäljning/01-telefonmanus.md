@@ -1,4 +1,4 @@
-# Telefonmanus — Nick-stuket (bygg först, sälj sen)
+# Telefonmanus — Webbexperten (Nick-stuket)
 
 ## Målgrupp
 Småföretag i Stockholm med ingen eller dålig hemsida.
@@ -13,7 +13,7 @@ Sen ringer du och säger "jag har redan byggt en åt er — kolla in den".
 
 ### 1. Öppning
 
-**Du:** Hej, jag heter [ditt namn]. Jag såg att ni inte har nån riktig hemsida — finns det någon speciell anledning till det?
+**Du:** Hej, jag heter Dino. Jag såg att ni inte har nån riktig hemsida — finns det någon speciell anledning till det?
 
 > *Lyssna. Låt dem svara.*
 
