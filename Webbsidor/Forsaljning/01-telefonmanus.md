@@ -27,9 +27,7 @@ Sen ringer du och säger "jag har redan byggt en åt er — kolla in den".
 
 ### 2. Svaret
 
-**Du:** Okej, jag ville bara hjälpa er att få en "online presence" så jag har faktiskt byggt en färdig hemsida åt er. Om du har 5 minuter nästa vecka eller i dagarna att kolla hur den ser ut — skulle det vara något som är öppet för?
-
-> *Vänta på svar.*
+**Du:** Okej, jag ville bara hjälpa er att få en "online presence" så jag har faktiskt byggt en färdig hemsida åt er. Om du har 5 minuter nästa vecka eller i dag att kolla hur den ser ut — skulle det vara något som är öppet för?
 
 ---
 
