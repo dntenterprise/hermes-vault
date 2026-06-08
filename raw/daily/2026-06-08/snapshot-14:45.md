@@ -1,6 +1,6 @@
-# Snapshot -- 2026-06-08 09:45
+# Snapshot -- 2026-06-08 14:45
 
-Uptime: up 4 days, 19 hours, 47 minutes
+Uptime: up 5 days, 47 minutes
 
 ## Shopify
 Store: PupRoam
@@ -16,9 +16,9 @@ Total products: -
   PupRoam Vinterplysch Husdjursbo - Fyrkantig Matta | active
 
 ## DNS (puproam.store TXT)
-google-site-verification=3C2slTfKcybzTFw4qCqsjZ_1aLB3Qw-T9rRcMQTUSyY
-brevo-code:db384e2879a86726d54aca124944ec88
 v=spf1 include:spf.improvmx.com include:spf.brevo.com ~all
+brevo-code:db384e2879a86726d54aca124944ec88
+google-site-verification=3C2slTfKcybzTFw4qCqsjZ_1aLB3Qw-T9rRcMQTUSyY
 
 ## Gateway: Running
 ## Disk: 80G free / 17%
