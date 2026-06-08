@@ -58,7 +58,10 @@ Sen ringer du och säger "jag har redan byggt en åt er — kolla in den".
 ## Förberedelse innan du ringer
 
 1. Välj 5 leads från listan
-2. Bygg en enkel en-sida åt varje
-3. Ring och visa direkt
+2. Ring och kör scriptet — se vem som nappar
+3. **Om de är intresserade** → bygg sidan, skicka, följ upp
+4. **Om de inte är intresserade** → gå vidare till nästa
 
-**Sikta på: 5 samtal → 2 som gillar → 1 som köper**
+**Sikta på: 5 samtal → 2 som vill se → 1 som köper**
+
+> ⚠️ Tips: Säg att du byggt sidan för att väcka intresse. Om de nappar — bygg den **efter** samtalet. Inget byggs i onödan.
