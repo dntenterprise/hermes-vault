@@ -11,10 +11,14 @@
             "id": "2eee32567dad0a3f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Grafvy"
+              "type": "markdown",
+              "state": {
+                "file": "Skills/claude-youtube-skill.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "claude-youtube-skill"
             }
           }
         ]
@@ -180,6 +184,11 @@
   },
   "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
+    "Webbsidor/Försäljning/04-epost-mallar.md",
+    "Webbsidor/Försäljning/03-sms-uppfoljning.md",
+    "Webbsidor/Försäljning/02-offertmall-paket.md",
+    "Webbsidor/Försäljning/01-telefonmanus.md",
+    "Webbsidor/Försäljning",
     "wiki/concepts/dropshipping-tools-research.md",
     "wiki/system/maintenance.md",
     "PupRoam/2026-06-07_email_flows.md",
@@ -204,10 +213,6 @@
     "Skills/claude-youtube-skill.md",
     "README.md",
     "PupRoam/2026-06-07_packlista_lead_magnet.md",
-    "raw/docs/pupram-email-templates.md",
-    "raw/daily/2026-06-08/snapshot-09:45.md",
-    "raw/daily/2026-06-08/snapshot-12:45.md",
-    "raw/daily/2026-06-08/snapshot-02:44.md",
     "raw/daily/2026-06-08",
     "Skills",
     "raw/daily/2026-06-07",
@@ -222,7 +227,6 @@
     "PupRoam/assets/pet_nest_1.jpg",
     "PupRoam/assets",
     "PupRoam",
-    "People",
-    "wiki/daily"
+    "People"
   ]
 }
