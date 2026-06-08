@@ -1,73 +1,85 @@
-# Telefonmanus — Försäljning av hemsidor till småföretag i Stockholm
+# Telefonmanus — Nick-stuket (bygg först, sälj sen)
 
 ## Målgrupp
-Frisörsalonger, restauranger, städfirmor, byggfirmor, elektriker — företag i Stockholm med ingen eller mycket enkel hemsida.
+Småföretag i Stockholm med ingen eller dålig hemsida.
+Frisörer, restauranger, städfirmor, byggfirmor, elektriker.
+
+## Tanken
+Du bygger en enkel hemsida **innan** du ringer.
+Sen ringer du och säger "jag byggde en åt er — vill ni se?"
+Ingen presentation, ingen byrå-snack. Bara show.
 
 ---
 
-## Manus — Steg för steg
+## Manus
 
-### 1. Öppning (första 7 sekunder — avgör om de lyssnar)
+### 1. Öppning — direkt, självsäker
 
-**Hej [Namn]!** Jag heter [Ditt namn] och ringer från en webbbyrå här i Stockholm. Stör jag dig mitt i lunchen?
+**Du:** Hej, jag söker [ägaren/ansvarige]?
 
-> *Vänta på svar. Om "ja" — fråga när du kan ringa igen.*
+**Butik:** Det är jag.
 
-**Kort version:**
+**Du:** [Ditt namn] här. Jag såg att ni inte har nån riktig hemsida, så jag svängde ihop en åt er. Bara för att visa.
 
-Jag hjälper småföretag i Stockholm att synas bättre på Google — med en ny, mobilvänlig hemsida. Har du 2 minuter?
+> *(paus 2 sek — låt det sjunka in)*
 
-> *Oavsett svar: fortsätt till steg 2.*
-
----
-
-### 2. Fånga intresse — känn av problemet
-
-**Anledningen till att jag ringer:** Jag hittade er på nätet och såg att ni har [ingen hemsida / en gammal hemsida / bara Facebook-sida]. Många av era kunder söker efter [frisör i Stockholm / bästa restaurangen i XX / städfirma XXX] på Google — och om man inte syns där, då tappar man mycket.
-
-**Känner du igen det?** Att man vet att man borde synas bättre online men inte hunnit göra något åt det?
-
-> *Lyssna. Låt dem berätta.*
+**Du:** Helt okej om ni inte vill ha den. Men jag tänkte att ni skulle få se den först. Har du två minuter nu?
 
 ---
 
-### 3. Bygg värde — kort förklaring
+### 2. Visa — be inte om lov
 
-**Så här jobbar jag:** Jag bygger moderna hemsidor som är:
-- **Mobilvänliga** — 80% av sökningarna kommer från mobilen
-- **Optimerade för Google** — så folk hittar dig när de söker
-- **Klara på 1–2 veckor** — du behöver inte vänta i månader
+**Du:** Grymt. Kolla här — [skicka länk/show på skärmen].
 
-Allt ingår — hosting, SSL-certifikat, kontaktformulär, kartor. Du betalar en fast startavgift och sen en låg månadskostnad. Inga dolda avgifter.
+**Du:** Det är enkelt. Era kontaktuppgifter, öppettider, lite bilder. Mobilvänlig. Syns på Google.
 
----
+> *(tyst medan de tittar)*
 
-### 4. Hantera invändningar
-
-**"Jag har redan en hemsida"**
-- *Grymt!* När byggdes den? Är den mobilvänlig? Syns den på Google? Ofta har äldre sidor dålig ranking — vi kan göra en helt gratis koll.
-
-**"Jag har inte budget"**
-- Jag förstår. Vårt enklaste paket börjar på 5 995 kr, och sen 495 kr i månaden — det är mindre än vad en annons i lokaltidningen kostar. Och en hemsida jobbar för dig dygnet runt, 365 dagar om året.
-
-**"Jag använder bara Facebook/Instagram"**
-- Sociala medier är bra, men din sida äger du själv. När Facebook ändrar algoritmen tappar du räckvidd. En hemsida är din egna plats på nätet — den äger du.
-
-**"Jag måste fundera"**
-- Självklart. Jag kan mejla över våra paket och priser så du kan kika i lugn och ro. När passar det bäst att jag hör av mig igen? Om en vecka kanske?
+**Du:** Vad tror du?
 
 ---
 
-### 5. Avslut — boka nästa steg
+### 3. Hantera invändningar
 
-**Toppen! Då gör vi så här:** Jag skickar ett mejl med våra paket och priser direkt. Kika på det, och jag ringer dig på [dag] igen. Låter det bra?
+**"Snygg! Hur mycket?"**
+- Den här typen av sida kostar [5 995 kr] och sen [495 kr/mån] för hosting och underhåll.
+- Men som sagt — vill ni inte ha den så tar jag bort den. Inga konstigheter.
 
-> *Bekräfta dag och tid. Tacka för samtalet.*
+**"Måste fråga min partner/son/dotter"**
+- Självklart. Jag kan mejla över samma sida till er båda så kikar ni i lugn och ro.
+- När passar det att jag ringer igen?
+
+**"Vad är haken?"**
+- Ingen hake. Jag bygger hemsidor. Det här är ett sätt för mig att visa vad jag kan.
+- Gillar ni den — toppen. Annars — inget händer.
 
 ---
 
-## Alternativt avslut (om du är ute på plats)
+### 4. Avslut
 
-**Jag är i området på [dag].** Kan jag svänga förbi med en kopp kaffe och visa några exempel? Det tar 10 minuter, max.
+**Du:** Okej! Behöver ni ändra nåt — färger, text, bilder — så fixar jag det. Hör av er när ni bestämt er, annars ringer jag på [dag] igen.
 
-> *Personligt möte är alltid bättre — sikta på fysiskt möte om de är i Stockholmsområdet och du har tid.*
+**Eller om de säger ja direkt:**
+**Du:** Perfekt. Då kör vi. Jag sätter igång med era ändringar idag. Välkomna!
+
+---
+
+## Varför det här funkar bättre
+
+| Gammalt manus | Nick-manus |
+|---|---|
+| "Jag ringer från en webbbyrå" | "Jag byggde en sida åt er" |
+| Ber om lov att få berätta | Visar direkt |
+| Förklarar varför de behöver en sida | Låter sidan tala för sig själv |
+| "Fundera och hör av dig" | "Jag ringer dig på dag X" |
+| Säljer på framtida värde | Levererar värde före samtalet |
+
+## Förberedelse innan du ringer
+
+1. Välj 5 leads från listan
+2. Bygg en enkel en-sida åt varje (namn, adress, telefon, öppettider, 3 bilder)
+3. Lägg upp den på en undersida (t.ex. dindoman.se/frisör-x)
+4. Ring och visa direkt
+5. Om de tackar ja — byt till deras domän och lansera
+
+**Sikta på: 5 samtal → 2 som gillar sidan → 1 som köper**
