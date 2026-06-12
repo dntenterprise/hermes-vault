@@ -11,10 +11,14 @@
             "id": "2eee32567dad0a3f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Grafvy"
+              "type": "markdown",
+              "state": {
+                "file": "Webbsidor/Försäljning/01-telefonmanus.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01-telefonmanus"
             }
           }
         ]
@@ -180,6 +184,11 @@
   },
   "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
+    "PupRoam/2026-06-09-design-redesign.md",
+    "YouTube/Viral Channels.md",
+    "YouTube/Raaz Ki Duniya/scripts/001-khaali-gali.md",
+    "YouTube/Raaz Ki Duniya/scripts",
+    "YouTube/Raaz Ki Duniya",
     "People/Boss.md",
     "wiki/entities/PupRoam.md",
     "wiki/system/architecture.md",
@@ -207,15 +216,11 @@
     "raw/daily/2026-06-08/snapshot-18:45.md",
     "raw/daily/2026-06-08/snapshot-17:45.md",
     "Webbsidor/Forsaljning/02-offertmall-paket.md",
-    "wiki/log.md",
-    "raw/daily/2026-06-07/snapshot-21:44.md",
-    "Webbsidor/Forsaljning/03-sms-uppfoljning.md",
     "Webbsidor/Forsaljning",
     "Webbsidor",
     "raw/daily/2026-06-08",
     "Skills",
     "raw/daily/2026-06-07",
-    "raw/daily",
     "PupRoam/assets/puproam_logo_feathered.png",
     "PupRoam/assets/puproam_logo_transparent.png",
     "PupRoam/assets/plush_mat_3.jpg",
@@ -223,7 +228,6 @@
     "PupRoam/assets/plush_mat_1.jpg",
     "PupRoam/assets/pet_nest_3.jpg",
     "PupRoam/assets/pet_nest_2.jpg",
-    "PupRoam/assets/pet_nest_1.jpg",
-    "PupRoam/assets"
+    "PupRoam/assets/pet_nest_1.jpg"
   ]
 }
