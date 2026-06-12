@@ -178,11 +178,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a9cc37b862342aed",
+  "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
-    "PupRoam/2026-06-06_final_marketing_plan.md",
+    "People/Boss.md",
+    "wiki/entities/PupRoam.md",
+    "wiki/system/architecture.md",
     "PupRoam/Brevo Email Setup.md",
     "YouTube/Raaz Ki Duniya.md",
+    "PupRoam/assets/puproam_signatur.html",
+    "PupRoam/assets/puproam_logo_small.png",
+    "PupRoam/2026-06-06_final_marketing_plan.md",
     "YouTube",
     "wiki/system/pupram-email-templates.md",
     "Webbsidor/Försäljning/04-epost-mallar.md",
@@ -202,14 +207,11 @@
     "raw/daily/2026-06-08/snapshot-18:45.md",
     "raw/daily/2026-06-08/snapshot-17:45.md",
     "Webbsidor/Forsaljning/02-offertmall-paket.md",
-    "wiki/entities/PupRoam.md",
     "wiki/log.md",
     "raw/daily/2026-06-07/snapshot-21:44.md",
     "Webbsidor/Forsaljning/03-sms-uppfoljning.md",
     "Webbsidor/Forsaljning",
     "Webbsidor",
-    "raw/daily/2026-06-07/snapshot-18:46.md",
-    "Skills/crawl4ai-setup.md",
     "raw/daily/2026-06-08",
     "Skills",
     "raw/daily/2026-06-07",
@@ -222,7 +224,6 @@
     "PupRoam/assets/pet_nest_3.jpg",
     "PupRoam/assets/pet_nest_2.jpg",
     "PupRoam/assets/pet_nest_1.jpg",
-    "PupRoam/assets",
-    "PupRoam"
+    "PupRoam/assets"
   ]
 }
