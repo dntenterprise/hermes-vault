@@ -7,7 +7,7 @@
 
 ---
 
-## Resultat
+## Resultat — hela NY-sessionen (14:45–21:00 UTC)
 
 | Metrik | Värde |
 |--------|-------|
@@ -20,6 +20,21 @@
 
 ---
 
+## Resultat — före 17:30 UTC
+
+Om du bara sitter 14:45–17:30 UTC (slut vid svensk tid 19:30 sommar / 18:30 vinter):
+
+| Metrik | Före 17:30 |
+|--------|:----------:|
+| **Return** | **+$25 398 (+16.9%)** |
+| **Trades** | 57 |
+| **Win rate** | **63.2%** |
+| **Utan after-hours** | ✅ |
+
+> ⚠ Dessa siffror är från CVD-approximation (yfinance), inte real tickdata. Win raten är högre men PnL lägre eftersom färre trades.
+
+---
+
 ## Parametrar
 
 | Parameter | Värde |
@@ -28,8 +43,8 @@
 | Stop loss | 1.5 ATR |
 | Target | 2.0 ATR |
 | Trail stops | AV (ingen trailing) |
-| Riktning | Long-only |
-| Session | NY-session 14:45–21:00 UTC |
+| Riktning | **Long-only** (inga shorts) |
+| Session | NY-session 14:45–21:00 (eller före 17:30) |
 | Timeframe | 5-min |
 | Exit via | Target eller CVD fade |
 
@@ -48,7 +63,8 @@
 
 ## Noteringar
 
-- Ingen trailing använd — alla exits via target (2.0 ATR) eller CVD fade-signal
-- Risk 0.5% per trade är låg — strategin tål högre risk (testat upp till 2.5% med +61k på 60d)
-- Strategin presterar bäst i NY-session, skippa första 15 min
-- Trendfilter (kort när daglig trend är ner) används inte för long-only
+- Endast **longs** — kort-sidan är inte testad
+- Ingen trailing — exit via target eller CVD fade
+- Risk 0.5%/trade är låg — strategin tål högre
+- Skippa första 15 min av NY-sessionen (14:45 istället för 14:30)
+- Tidig stängning vid 17:30 funkar — högre win rate, färre trades
