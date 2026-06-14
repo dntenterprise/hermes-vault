@@ -11,14 +11,10 @@
             "id": "2eee32567dad0a3f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/concepts/cvd-complete-guide.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "cvd-complete-guide"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Grafvy"
             }
           }
         ]
@@ -184,8 +180,11 @@
   },
   "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
-    "YouTube/Raaz Ki Duniya/scripts/001-khaali-gali.md",
+    "wiki/concepts/nq-backtest-resultat.md",
+    "wiki/system/maintenance.md",
     "wiki/concepts/fabio-valentini-strategy.md",
+    "wiki/concepts/cvd-complete-guide.md",
+    "YouTube/Raaz Ki Duniya/scripts/001-khaali-gali.md",
     "PupRoam/2026-06-09-design-redesign.md",
     "Webbsidor/Försäljning/01-telefonmanus.md",
     "YouTube/Viral Channels.md",
@@ -209,13 +208,10 @@
     "Webbsidor/Försäljning/03-sms-uppfoljning.md",
     "Webbsidor/Försäljning",
     "wiki/concepts/dropshipping-tools-research.md",
-    "wiki/system/maintenance.md",
     "raw/daily/2026-06-07/snapshot-18:43.md",
     "raw/daily/2026-06-08/snapshot-14:45.md",
     "Webbsidor/Forsaljning/04-epost-mallar.md",
     "Webbsidor/Forsaljning/01-telefonmanus.md",
-    "raw/daily/2026-06-08/snapshot-18:45.md",
-    "raw/daily/2026-06-08/snapshot-17:45.md",
     "Webbsidor/Forsaljning",
     "Webbsidor",
     "raw/daily/2026-06-08",
