@@ -84,3 +84,42 @@ London Open ≥0.3% ÖVER NY Open  → London bullish → NY bearish → KORT
 
 ## Fil
 `/opt/data/profiles/sickan/scripts/smc_of.py`
+
+---
+
+## Sammanfattning — Två modeller, en strategi
+
+| Modell | När | Typ | Entry |
+|---|---|---|---|
+| **SMC-OF** | Bias-dagar (≥0.3%) | 🔄 Reversal | MSS + sweep + absorption + divergence = trendvändning |
+| **ORB_OF** | Neutrala dagar (<0.3%) | 🚀 Breakout | ORB high/low + hög volym + rätt delta = fortsättning |
+
+### Live — klockan 09:30 ET
+
+```
+1. Kolla London Open (03:00) vs NY Open (09:30)
+
+   ≥0.3% under → London bearish → NY bullish → SMC-OF (letar longs)
+   ≥0.3% över  → London bullish → NY bearish → SMC-OF (letar shorts)
+   <0.3%       → NEUTRAL → ORB_OF
+
+2. NEUTRAL → ORB_OF:
+   - Vänta till 09:45 (ORB range satt: high/low av 09:30-09:45)
+   - Breakout ovanför ORB high eller under ORB low
+   - Kräver OF-bekräftelse:
+     a) Volym högre än snitt (>1.3x)
+     b) Delta candle grön (long) / röd (short)
+     c) MA(12)-linjen pekar i rätt riktning
+   - Stop: under ORB low (long) / över ORB high (short)
+
+3. BIAS → SMC-OF:
+   - Vänta på MSS + sweep inom NY session
+   - Kräver ≥4 poäng från poängsystemet
+   - Stop: ATR × 1.5
+   - Target: nästa swing eller ATR × 2.0
+```
+
+### Skillnad
+
+- **SMC-OF** = fångar botten/toppen (reversal)
+- **ORB_OF** = fångar impulsen när den väl startat (breakout)
