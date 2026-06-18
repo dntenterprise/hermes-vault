@@ -1,6 +1,7 @@
 # SMC-OF — SMC Structure + Order Flow Hybrid
 
 **Skapad:** 2026-06-17
+**Uppdaterad:** 2026-06-18 (fixed bias-formel)
 **Baserat på:** SMC (ICT) + Fabio order flow + din AMD bias-metod
 **Instrument:** NQ=F / MNQ 5-min
 **Script:** `smc_of.py`
@@ -11,16 +12,21 @@
 
 | Metrik | Värde |
 |---|---|
-| Trades | 38 (17 SMC-OF + 21 ORB_OF) |
-| Win rate | **86.8%** |
-| Profit factor | **6.67** |
-| Total PnL | **+$19,703** |
-| Trades/dag | 0.7 (~1/dag) |
-| Avg win | +$702 |
-| Stop-losses | 4 st (−$750 var) |
-| Target hits | 33 av 38 |
+| Trades | 53 (32 SMC-OF + 21 ORB_OF) |
+| Win rate | **79.2%** |
+| Profit factor | **3.78** |
+| Total PnL | **+$15,858** |
+| Return | **10.57%** (på $150K) |
+| Trades/dag | 1.0 |
+| Avg win | +$513 |
+| Avg loss | -$518 |
+| Target hits | 47 av 53 |
+| Longs | 45 tr · 35 wins (+$10,727) |
+| Shorts | 8 tr · 7 wins (+$5,131) |
 
-Jämfört med SMC v1: +$6,882 på 59 dagar — **SMC-OF är ~3x bättre**.
+Jämfört med SMC v1: +$6,882 på 59 dagar — **SMC-OF är ~2.3x bättre**.
+
+**Viktig fix 18 juni:** Bias-formeln var inverterad. Använder nu `diff = (ny_open - lo_open) / lo_open` — positiv diff = London bullish → NY bear bias (shorts), negativ diff = London bearish → NY bull bias (longs).
 
 ---
 
@@ -28,24 +34,24 @@ Jämfört med SMC v1: +$6,882 på 59 dagar — **SMC-OF är ~3x bättre**.
 
 ### 1. SMC-OF (bias-dagar)
 
-**När:** London Open ≥0.3% under/över NY Open
+**När:** |London Open − NY Open| ≥ 0.3%
 
 **Entry-krav (≥4 poäng):**
 - MSS after sweep (+2p)
 - SMT divergence NQ vs ES (+1p)
-- London bias rätt (+1p)
+- London bias matchar (+1p)
 - VP-zon (discount/premium) (+1p)
 - Absorption bars (+2p) — body <30%, volym >1.3x MA(24)
-- Volymdivergens (+2p) — 24-bar low/ high utan volym
+- Volymdivergens (+2p) — 24-bar low/high utan volym
 
 **Kontext:**
 - NY session (09:30-16:00 ET)
 - Daily trend (SMA20 > SMA50 för longs)
-- London bias matchar
+- London bias matchar riktning
 
 ### 2. ORB_OF (neutrala dagar)
 
-**När:** London bias <0.3% (neutral)
+**När:** London bias < 0.3% (neutral)
 
 **ORB-range:** Första 15 min av NY (09:30-09:45 ET)
 
@@ -61,12 +67,17 @@ Jämfört med SMC v1: +$6,882 på 59 dagar — **SMC-OF är ~3x bättre**.
 ## London Bias (din metod)
 
 ```
-London Open vs NY Open (0.3% tröskel)
+diff = (NY_open - London_open) / London_open
 
-London Open ≥0.3% UNDER NY Open → London bearish → NY bullish → LÅNG
-London Open ≥0.3% ÖVER NY Open  → London bullish → NY bearish → KORT
-<0.3% skillnad → NEUTRAL → ORB_OF
+diff ≥ +0.3%  → London bullish → NY bearish bias (letar SHORTS)
+diff ≤ −0.3%  → London bearish → NY bullish bias (letar LONGS)
+|diff| < 0.3% → NEUTRAL → ORB_OF breakout
 ```
+
+London open = första 5-min baren kl 03:00 ET
+NY open = första 5-min baren kl 09:30 ET
+
+**Tolkning:** Om priset går upp under London-sessionen (bullish London), förväntar vi oss en nedgång i NY (bearish bias) — mean reversion. Om priset går ner under London (bearish London), förväntar vi oss uppgång i NY (bullish bias).
 
 ---
 
@@ -79,6 +90,17 @@ London Open ≥0.3% ÖVER NY Open  → London bullish → NY bearish → KORT
 
 - Risk: 0.5% per trade ($750 på $150K)
 - EOD exit kl 16:00 ET om fortfarande i trade
+
+---
+
+## Resultat per entry-typ
+
+| Entry | Trades | Wins | PnL |
+|---|---|---|---|
+| ORB_OF (0p) | 21 | 20 (95%) | +$7,793 |
+| SMC-OF 4p | 26 | 20 (77%) | +$8,350 |
+| SMC-OF 5p | 5 | 2 (40%) | +$26 |
+| SMC-OF 6p | 1 | 0 (0%) | -$311 |
 
 ---
 
