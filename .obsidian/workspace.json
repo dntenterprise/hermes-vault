@@ -11,10 +11,14 @@
             "id": "2eee32567dad0a3f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Grafvy"
+              "type": "markdown",
+              "state": {
+                "file": "wiki/concepts/smc-of-strategy.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "smc-of-strategy"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "smc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,9 +182,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a9cc37b862342aed",
+  "active": "2eee32567dad0a3f",
   "lastOpenFiles": [
+    "wiki/concepts/smc-strategy.md",
     "wiki/concepts/nq-backtest-resultat.md",
+    "wiki/concepts/smc-of-strategy.md",
+    "wiki/concepts/fabio-strategy-implementation.md",
+    "wiki/concepts/fabio-backtest-yfinance.md",
     "wiki/concepts/fabio-valentini-strategy.md",
     "wiki/system/maintenance.md",
     "wiki/concepts/cvd-complete-guide.md",
@@ -208,10 +216,6 @@
     "Webbsidor/Försäljning/03-sms-uppfoljning.md",
     "Webbsidor/Försäljning",
     "wiki/concepts/dropshipping-tools-research.md",
-    "raw/daily/2026-06-07/snapshot-18:43.md",
-    "raw/daily/2026-06-08/snapshot-14:45.md",
-    "Webbsidor/Forsaljning/04-epost-mallar.md",
-    "Webbsidor/Forsaljning/01-telefonmanus.md",
     "Webbsidor/Forsaljning",
     "Webbsidor",
     "raw/daily/2026-06-08",
