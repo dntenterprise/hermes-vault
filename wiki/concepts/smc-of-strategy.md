@@ -1,7 +1,7 @@
 # SMC-OF — SMC Structure + Order Flow Hybrid
 
 **Skapad:** 2026-06-17
-**Uppdaterad:** 2026-06-18 (fixed bias-formel)
+**Uppdaterad:** 2026-06-19 (stop ATR×1.0)
 **Baserat på:** SMC (ICT) + Fabio order flow + din AMD bias-metod
 **Instrument:** NQ=F / MNQ 5-min
 **Script:** `smc_of.py`
@@ -10,21 +10,24 @@
 
 ## Backtest-resultat (53 dagar)
 
-| Metrik | Värde |
-|---|---|
-| Trades | 53 (32 SMC-OF + 21 ORB_OF) |
-| Win rate | **79.2%** |
-| Profit factor | **3.78** |
-| Total PnL | **+$15,858** |
-| Return | **10.57%** (på $150K) |
-| Trades/dag | 1.0 |
-| Avg win | +$513 |
-| Avg loss | -$518 |
-| Target hits | 47 av 53 |
-| Longs | 45 tr · 35 wins (+$10,727) |
-| Shorts | 8 tr · 7 wins (+$5,131) |
+| Metrik | Gammalt (ATR×1.5) | Nytt (ATR×1.0) 🔥 |
+|---|---|---|
+| Trades | 53 | **54** |
+| Win rate | 79.2% | **77.8%** |
+| Profit factor | 3.78 | **3.56** |
+| Total PnL | +$15,858 | **+$21,587** |
+| Return | 10.57% | **14.39%** |
+| Trades/dag | 1.0 | 1.0 |
+| Avg win | +$513 | +$715 |
+| Avg loss | -$518 | -$703 |
+| Target hits | 47 av 53 | 46 av 54 |
+| Stops | 3 | 7 |
+| Longs | 45 tr (+$10,727) | 46 tr (+$13,913) |
+| Shorts | 8 tr (+$5,131) | 8 tr (+$7,674) |
 
-Jämfört med SMC v1: +$6,882 på 59 dagar — **SMC-OF är ~2.3x bättre**.
+**Stop ändrat från ATR×1.5 till ATR×1.0** — snävare stop = större position = +36% mer profit (+$21,587 vs +$15,858).
+
+Jämfört med SMC v1: +$6,882 på 59 dagar — **SMC-OF är ~3.1x bättre**.
 
 **Viktig fix 18 juni:** Bias-formeln var inverterad. Använder nu `diff = (ny_open - lo_open) / lo_open` — positiv diff = London bullish → NY bear bias (shorts), negativ diff = London bearish → NY bull bias (longs).
 
@@ -85,10 +88,11 @@ NY open = första 5-min baren kl 09:30 ET
 
 | Typ | Stop | Target |
 |---|---|---|
-| SMC-OF | ATR × 1.5 | Nästa swing low/high eller ATR × 2.0 |
+| SMC-OF | **ATR × 1.0** | Nästa swing low/high eller ATR × 2.0 |
 | ORB_OF | ORB low − 0.5 | ORB-range × 1.5 |
 
 - Risk: 0.5% per trade ($750 på $150K)
+- Stop: ATR×1.0 (snävare = större position)
 - EOD exit kl 16:00 ET om fortfarande i trade
 
 ---
