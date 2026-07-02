@@ -77,6 +77,8 @@
     padding: 160px 0 100px;
     background: linear-gradient(rgb(250,248,255), rgb(240,235,255) 35%, rgb(232,223,255), rgb(253,242,248) 75%, rgb(252,231,243));
     text-align: center;
+    position: relative;
+    overflow: hidden;
   }
   .hero-inner { max-width: 780px; margin: 60px auto 0; }
   
@@ -330,10 +332,12 @@
       <a href="#process" class="btn-secondary">How It Works</a>
     </div>
   </div>
-  <!-- Wave to dark — EXACT SVG från creativeos, inuti hero-sektionen -->
-  <svg viewBox="0 0 1440 180" preserveAspectRatio="none" style="display:block;width:100%;height:120px;overflow:hidden;line-height:0;">
-    <path d="M0,86.14 C320,174.23 600,13.88 900,77.50 C1100,126.01 1300,24.26 1440,101.47 L1440,180 L0,180 Z" fill="rgb(16,12,29)"/>
-  </svg>
+  <!-- Wave — EXAKT från creativeos: absolut positionerad, bottom:-1px -->
+  <div style="position:absolute; bottom:-1px; left:0; right:0; height:120px; z-index:1; line-height:0; overflow:visible; pointer-events:none;">
+    <svg viewBox="0 0 1440 180" preserveAspectRatio="none" style="display:block; width:100%; height:100%;">
+      <path d="M0,81.43875616244647 C320,173.06769517138449 600,17.399904672971342 900,81.3809096005851 C1100,127.9078305235012 1300,23.018510207425855 1440,97.73858021628149 L1440,180 L0,180 Z" fill="rgb(16,12,29)"/>
+    </svg>
+  </div>
 </section>
 
 <!-- How It Works (dark) -->
