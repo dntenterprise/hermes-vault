@@ -186,8 +186,12 @@
   /* ===== LIGHT SECTION ===== */
   .light-section { padding: 100px 0; text-align: center; }
   .light-section .section-title { color: rgb(26,26,26); }
-  .light-section .section-tag {
-    color: rgb(103,59,236); border-color: rgba(103,59,236,0.25);
+  .section-tag.light {
+    color: rgb(103,59,236);
+    border-color: rgba(103,59,236,0.2);
+    background: rgba(103,59,236,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
   .light-section .section-title .grad-text {
     background: linear-gradient(135deg, rgb(124,154,255), rgb(168,85,247), rgb(236,72,153));
@@ -378,7 +382,7 @@
 <!-- Services -->
 <section id="services" class="light-section">
   <div class="container">
-    <div class="section-tag" style="color:rgb(103,59,236);border-color:rgba(103,59,236,0.25);">SERVICES</div>
+    <div class="section-tag light">TJÄNSTER</div>
     <h2 class="section-title">Allt du behöver för att synas och sälja</h2>
     <div class="services-grid">
       <div class="service-card">
@@ -403,7 +407,7 @@
 <!-- Pricing -->
 <section id="pricing" class="pricing-section">
   <div class="container">
-    <div class="section-tag" style="color:rgb(103,59,236);border-color:rgba(103,59,236,0.25);">PRICING</div>
+    <div class="section-tag light">PRISER</div>
     <h2 class="section-title">Tydliga paket —<br><span class="grad-text">inga dolda avgifter</span></h2>
     <div class="pricing-grid">
       <div class="pricing-card">
