@@ -10,150 +10,164 @@
   html { scroll-behavior: smooth; }
   body { 
     font-family: 'DM Sans', system-ui, sans-serif;
-    color: rgb(26, 26, 26); background: rgb(255, 255, 255);
+    color: rgb(26, 26, 26); background: #fff;
     line-height: 24px; -webkit-font-smoothing: antialiased;
   }
   .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-  .gradient-text {
-    background: linear-gradient(135deg, rgb(103,59,236), rgb(233,72,131));
+  /* Gradient text utility */
+  .grad-text {
+    background: linear-gradient(135deg, rgb(255,126,69) 0%, rgb(232,72,131) 50%, rgb(139,92,246) 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* ===== HEADER / NAV (exactly like creativeos) ===== */
+  /* ===== HEADER — creativeos-style floating pill ===== */
   header[role="banner"] {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 80;
+    position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+    z-index: 80; width: 1100px; max-width: calc(100% - 48px);
     height: 68px;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    display: flex; align-items: center; padding: 0 24px;
   }
-  header[role="banner"] .container {
-    display: flex; align-items: center;
-    height: 68px;
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    width: 100%; height: 100%;
   }
-  .logo {
+  .logo-wrap {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: linear-gradient(135deg, #E8613C, #D946EF, #8B5CF6);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: #fff; font-weight: 700;
+  }
+  .logo-text {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 22px; font-weight: 800; color: rgb(26,26,26);
-    text-decoration: none; letter-spacing: -0.4px;
+    font-size: 20px; font-weight: 800; color: rgb(26,26,26);
+    letter-spacing: -0.4px;
   }
-  .logo span { color: rgb(103, 59, 236); }
-  .nav-links {
-    display: flex; align-items: center; gap: 0;
-    margin: 0 auto;
-  }
+  .nav-links { display: flex; align-items: center; gap: 0; }
   .nav-links a {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 14px; font-weight: 600;
-    padding: 8px 14px; text-decoration: none;
-    border-radius: 12px; transition: color 0.2s;
+    padding: 8px 14px; text-decoration: none; border-radius: 12px;
+    transition: background 0.2s;
   }
-  .nav-links a.active { color: rgb(26,26,26); }
-  .nav-links a:not(.active) { color: rgb(107,114,128); }
-  .nav-links a:hover { color: rgb(26,26,26); background: rgba(0,0,0,0.03); }
-  .nav-right { display: flex; align-items: center; gap: 2px; margin-left: auto; }
-  .nav-right a {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 14px; font-weight: 600;
-    text-decoration: none;
-  }
+  .nav-links a:hover { background: rgba(0,0,0,0.03); }
+  .nav-links a.ai-lab { color: rgb(236,72,153); }
+  .nav-links a.mgmt { background: linear-gradient(135deg, rgb(255,126,69), rgb(232,72,131), rgb(139,92,246)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .nav-links a:not(.ai-lab):not(.mgmt) { color: rgb(107,114,128); }
+  .nav-right { display: flex; align-items: center; gap: 4px; }
   .nav-login {
-    color: rgb(107,114,128);
-    padding: 8px 16px; border-radius: 12px;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 14px; font-weight: 600; color: rgb(107,114,128);
+    padding: 8px 16px; text-decoration: none; border-radius: 12px;
   }
   .nav-login:hover { color: rgb(26,26,26); }
   .nav-cta {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     display: inline-flex; align-items: center;
-    padding: 8px 16px;
-    background: rgb(103, 59, 236); color: #fff !important;
-    border-radius: 12px;
+    padding: 8px 20px; background: rgb(103,59,236); color: #fff !important;
+    border-radius: 12px; font-size: 14px; font-weight: 600; text-decoration: none;
   }
   .nav-cta:hover { opacity: 0.9; }
 
   /* ===== HERO ===== */
   #hero {
-    padding: 180px 0 100px;
-    background: linear-gradient(rgb(250, 248, 255), rgb(240, 235, 255) 35%, rgb(232, 223, 255), rgb(253, 242, 248) 75%, rgb(252, 231, 243));
-    position: relative;
+    padding: 160px 0 100px;
+    background: linear-gradient(rgb(250,248,255), rgb(240,235,255) 35%, rgb(232,223,255), rgb(253,242,248) 75%, rgb(252,231,243));
     text-align: center;
   }
-  .hero-inner { max-width: 800px; margin: 0 auto; }
-  .hero-tag {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(103,59,236,0.08); color: rgb(103,59,236);
-    padding: 6px 14px; border-radius: 100px; font-size: 12px; font-weight: 700;
-    margin-bottom: 28px;
+  .hero-inner { max-width: 780px; margin: 60px auto 0; }
+  
+  /* "Design using" pills */
+  .design-using {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin-bottom: 28px; font-size: 14px; color: rgb(107,114,128);
   }
+  .design-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fff; border: 1px solid rgb(229,231,235);
+    border-radius: 100px; padding: 6px 14px;
+    font-size: 13px; font-weight: 600; color: rgb(55,65,81);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .design-pill .dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: linear-gradient(135deg, #E8613C, #D946EF);
+  }
+  .design-pill .canva { color: #00C4CC; font-weight: 700; }
+  .design-pill .figma { color: #F24E1E; font-weight: 700; }
+
   #hero h1 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 58px; font-weight: 800; color: rgb(26,26,26);
-    line-height: 64px; letter-spacing: -1.2px;
-    margin: 0 auto 20px; max-width: 750px;
+    font-size: 56px; font-weight: 800; color: rgb(17,17,17);
+    line-height: 62px; letter-spacing: -1.2px;
+    max-width: 750px; margin: 0 auto 16px;
   }
-  #hero h1 .gradient-text {
-    background: linear-gradient(135deg, rgb(103,59,236), rgb(233,72,131), rgb(244,139,17));
+  #hero h1 .grad-text {
+    font-size: 58px;
+    background: linear-gradient(135deg, rgb(255,126,69) 0%, rgb(232,72,131) 50%, rgb(139,92,246) 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   #hero p {
-    font-size: 19px; color: rgb(107,114,128); line-height: 31px;
-    max-width: 550px; margin: 0 auto 32px;
+    font-size: 18px; color: rgb(107,114,128); line-height: 30px;
+    max-width: 600px; margin: 0 auto 32px;
   }
+  #hero p a { color: rgb(103,59,236); text-decoration: underline; }
   .hero-buttons { display: flex; gap: 12px; justify-content: center; }
   .btn-primary {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     display: inline-flex; align-items: center; gap: 8px;
     padding: 14px 28px;
-    background: linear-gradient(92.69deg, rgb(244,139,17) -7.33%, rgb(249,113,59) 6.83%, rgb(245,90,96) 22.12%, rgb(233,72,131) 38.55%, rgb(212,61,164) 56.68%, rgb(183,57,195) 73.67%, rgb(147,57,220) 91.23%, rgb(103,59,236) 105.96%);
+    background: linear-gradient(135deg, rgb(236,72,153), rgb(139,92,246));
     color: #fff; border-radius: 12px;
     font-size: 15px; font-weight: 600; text-decoration: none;
-    box-shadow: rgba(103,59,236,0.3) 0px 4px 20px 0px;
+    box-shadow: rgba(139,92,246,0.3) 0px 4px 20px 0px;
   }
   .btn-primary:hover { opacity: 0.92; transform: translateY(-1px); }
   .btn-secondary {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 28px; background: rgba(255,255,255,0.7);
-    color: rgb(26,26,26); border-radius: 12px;
+    padding: 14px 28px; background: #fff;
+    color: rgb(55,65,81); border-radius: 12px;
     font-size: 15px; font-weight: 600; text-decoration: none;
     border: 1px solid rgb(229,231,235);
   }
-  .btn-secondary:hover { background: rgba(255,255,255,0.9); border-color: rgb(200,205,210); }
+  .btn-secondary:hover { border-color: rgb(200,205,210); }
 
-  /* ===== SVG WAVE ===== */
+  /* ===== WAVE (fluid-wave between sections) ===== */
   .wave { display: block; width: 100%; line-height: 0; overflow: hidden; }
   .wave svg { display: block; width: 100%; height: 80px; }
 
-  /* ===== SECTION COMMON ===== */
-  section { padding: 100px 0; }
-  .section-center { text-align: center; }
+  /* ===== DARK SECTION ===== */
+  .dark-section {
+    background: rgb(16, 12, 29); padding: 100px 0;
+    text-align: center;
+  }
   .section-tag {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     display: inline-flex; align-items: center; gap: 6px;
-    font-size: 12px; font-weight: 700;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
     padding: 6px 14px; border-radius: 100px;
-    border: 1px solid; margin-bottom: 20px;
-  }
-  .dark-section .section-tag {
-    color: rgb(188,182,253); border-color: rgba(188,182,253,0.3);
-  }
-  .light-section .section-tag {
-    color: rgb(103,59,236); border-color: rgba(103,59,236,0.25);
+    border: 1px solid rgba(188,182,253,0.3);
+    color: rgb(188,182,253); margin-bottom: 20px;
   }
   .section-title {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 44px; font-weight: 800; color: rgb(26,26,26);
-    line-height: 52.8px; letter-spacing: -0.44px; margin-bottom: 60px;
-    max-width: 750px; margin-left: auto; margin-right: auto;
-  }
-
-  /* ===== DARK SECTION ===== */
-  .dark-section {
-    background: rgb(16, 12, 29);
+    font-size: 44px; font-weight: 800;
+    line-height: 52.8px; letter-spacing: -0.44px;
+    max-width: 750px; margin: 0 auto 60px;
   }
   .dark-section .section-title { color: #fff; }
-  .dark-section .section-title .gradient-text {
+  .dark-section .section-title .grad-text {
     background: linear-gradient(135deg, rgb(188,182,253), rgb(233,72,131), rgb(244,139,17));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -168,18 +182,26 @@
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 14px; font-weight: 700; color: rgb(188,182,253);
     display: inline-block; padding: 4px 10px;
-    border-radius: 8px; background: rgba(255,255,255,0.05);
-    margin-bottom: 16px;
+    border-radius: 8px; background: rgba(255,255,255,0.05); margin-bottom: 16px;
   }
   .step-card h3 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 20px; font-weight: 700; color: #fff;
-    margin-bottom: 10px;
+    font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 10px;
   }
   .step-card p { font-size: 14px; color: rgb(149,161,184); line-height: 22.4px; }
 
-  /* ===== SERVICES ===== */
-  .light-section { background: #fff; }
+  /* ===== LIGHT SECTION ===== */
+  .light-section { padding: 100px 0; text-align: center; }
+  .light-section .section-title { color: rgb(26,26,26); }
+  .light-section .section-tag {
+    color: rgb(103,59,236); border-color: rgba(103,59,236,0.25);
+  }
+  .light-section .section-title .grad-text {
+    background: linear-gradient(135deg, rgb(255,126,69), rgb(232,72,131), rgb(139,92,246));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
   .service-card {
     background: #fff; border: 1px solid rgb(229,231,235);
@@ -192,42 +214,34 @@
   }
   .service-card h3 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 18px; font-weight: 700; color: rgb(26,26,26);
-    margin-bottom: 8px;
+    font-size: 18px; font-weight: 700; color: rgb(26,26,26); margin-bottom: 8px;
   }
   .service-card p { font-size: 14px; color: rgb(107,114,128); line-height: 21px; }
 
   /* ===== PRICING ===== */
-  .pricing-section { background: linear-gradient(rgb(255,255,255), rgb(250,248,255)); }
-  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pricing-section { padding: 100px 0; text-align: center; background: linear-gradient(#fff, rgb(250,248,255)); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
   .pricing-card {
     background: #fff; border: 1px solid rgb(229,231,235);
-    border-radius: 20px; padding: 32px 24px; position: relative;
-    text-align: center;
+    border-radius: 20px; padding: 32px 24px; position: relative; text-align: center;
   }
-  .pricing-card.featured {
-    border-color: rgb(103,59,236);
-    box-shadow: rgba(103,59,236,0.12) 0px 4px 24px 0px;
-  }
+  .pricing-card.featured { border-color: rgb(103,59,236); box-shadow: rgba(103,59,236,0.12) 0px 4px 24px 0px; }
   .pricing-card .badge {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-    background: linear-gradient(92.69deg, rgb(244,139,17), rgb(249,113,59), rgb(245,90,96), rgb(233,72,131), rgb(103,59,236));
+    background: linear-gradient(135deg, rgb(244,139,17), rgb(233,72,131), rgb(103,59,236));
     color: #fff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    font-size: 11px; font-weight: 700;
-    padding: 4px 14px; border-radius: 100px; white-space: nowrap;
+    font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 100px; white-space: nowrap;
   }
   .pricing-card .plan {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 20px; font-weight: 700; color: rgb(26,26,26); margin-bottom: 8px;
-    text-align: center;
   }
   .pricing-card .price {
     font-size: 36px; font-weight: 800; color: rgb(26,26,26);
     margin-bottom: 4px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    text-align: center;
   }
   .pricing-card .price span { font-size: 16px; font-weight: 400; color: rgb(107,114,128); }
-  .pricing-card .desc { font-size: 14px; color: rgb(107,114,128); margin-bottom: 24px; text-align: center; }
+  .pricing-card .desc { font-size: 14px; color: rgb(107,114,128); margin-bottom: 24px; }
   .pricing-card ul { list-style: none; margin-bottom: 24px; text-align: left; }
   .pricing-card ul li {
     font-size: 14px; color: rgb(75,85,99); padding: 8px 0;
@@ -237,27 +251,25 @@
   .pricing-card ul li::before { content: '✓'; color: rgb(103,59,236); font-weight: 700; }
   .btn-pricing {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    display: block; text-align: center; padding: 14px 28px;
-    border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none;
+    display: block; padding: 14px 28px; border-radius: 12px;
+    font-size: 15px; font-weight: 600; text-decoration: none; text-align: center;
   }
   .btn-pricing.outline { border: 2px solid rgb(103,59,236); color: rgb(103,59,236); background: #fff; }
-  .btn-pricing.outline:hover { opacity: 0.8; }
   .btn-pricing.solid {
-    background: linear-gradient(92.69deg, rgb(244,139,17), rgb(249,113,59), rgb(245,90,96), rgb(233,72,131), rgb(103,59,236));
-    color: #fff; box-shadow: rgba(103,59,236,0.3) 0px 4px 20px 0px;
+    background: linear-gradient(135deg, rgb(236,72,153), rgb(139,92,246));
+    color: #fff; box-shadow: rgba(139,92,246,0.3) 0px 4px 20px 0px;
   }
-  .btn-pricing.solid:hover { opacity: 0.92; }
 
-  /* ===== CTA ===== */
+  /* ===== DARK CTA ===== */
   .cta-section {
-    background: rgb(16, 12, 29); text-align: center; padding: 80px 0;
+    background: rgb(16,12,29); text-align: center; padding: 80px 0;
   }
   .cta-section h2 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 44px; font-weight: 800; color: #fff;
     line-height: 52.8px; letter-spacing: -0.44px; margin-bottom: 16px;
   }
-  .cta-section .gradient-text {
+  .cta-section h2 .grad-text {
     background: linear-gradient(135deg, rgb(188,182,253), rgb(233,72,131), rgb(244,139,17));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -270,29 +282,37 @@
     border-top: 1px solid rgba(255,255,255,0.06);
   }
   footer .container { display: flex; justify-content: space-between; align-items: center; }
-  footer .logo { color: #fff; font-size: 18px; }
+  footer .logo-text { color: #fff; font-size: 18px; }
   footer p { color: rgba(255,255,255,0.5); font-size: 13px; }
   footer a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; }
   footer a:hover { color: rgba(255,255,255,0.8); }
 
   @media (max-width: 900px) {
+    .nav-links a:not(.ai-lab) { display: none; }
     .steps-grid, .services-grid, .pricing-grid { grid-template-columns: 1fr; }
-    #hero h1 { font-size: 36px; line-height: 42px; }
+    #hero h1 { font-size: 32px; line-height: 38px; }
+    #hero h1 .grad-text { font-size: 32px; }
     .section-title { font-size: 30px; line-height: 36px; }
-    .nav-links a, .nav-login { display: none; }
     section { padding: 60px 0; }
-    #hero { padding: 120px 0 60px; }
+    #hero { padding: 140px 0 60px; }
+    header[role="banner"] { top: 8px; height: 56px; padding: 0 16px; }
     footer .container { flex-direction: column; gap: 12px; text-align: center; }
   }
 </style>
 </head>
 <body>
 
+<!-- Header — floating pill like creativeos -->
 <header role="banner">
-  <div class="container">
-    <a href="#" class="logo">north<span>reach</span></a>
+  <div class="header-inner">
+    <a href="#" class="logo-wrap">
+      <div class="logo-icon">✦</div>
+      <span class="logo-text">north<span style="color:rgb(103,59,236)">reach</span></span>
+    </a>
     <div class="nav-links">
-      <a href="#" class="active">AI Lab</a>
+      <a href="#" class="ai-lab">AI Lab</a>
+      <a href="#">Campaigns</a>
+      <a href="#" class="mgmt">Managed Services</a>
       <a href="#process">How it works</a>
       <a href="#services">Tjänster</a>
       <a href="#pricing">Priser</a>
@@ -307,28 +327,33 @@
 <!-- Hero -->
 <section id="hero">
   <div class="container hero-inner">
-    <div class="hero-tag">✦ Sveriges nya digitala byrå</div>
-    <h1>Din hemsida ska sälja —<br>vi bygger <span class="gradient-text">kundflödet</span></h1>
-    <p>En modern hemsida är bara starten. Vi hjälper dig att synas, sälja och växa — med design, annonsering och smarta system.</p>
+    <div class="design-using">
+      Design using
+      <span class="design-pill"><span class="dot"></span>Editor</span>
+      <span class="design-pill"><span class="canva">Canva</span></span>
+      <span class="design-pill"><span class="figma">Figma</span></span>
+    </div>
+    <h1>Din hemsida ska sälja —<br><span class="grad-text">vi bygger kundflödet</span></h1>
+    <p><a href="#">AI-drivna verktyg</a> som analyserar, genererar och optimerar din marknadsföring — plus beprövade strategier för att lansera kampanjer på minuter, inte dagar.</p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">Boka gratis konsultation →</a>
+      <a href="#contact" class="btn-primary">Start Free Trial →</a>
       <a href="#process" class="btn-secondary">How It Works</a>
     </div>
   </div>
 </section>
 
 <!-- Wave to dark -->
-<div class="wave" style="margin-top: -1px;">
+<div class="wave" style="margin-top:-1px;">
   <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-    <path d="M0,80 C360,20 1080,140 1440,40 L1440,80 L0,80 Z" fill="rgb(16,12,29)"/>
+    <path d="M0,80 C240,20 480,60 720,40 C960,20 1200,60 1440,30 L1440,80 L0,80 Z" fill="rgb(16,12,29)"/>
   </svg>
 </div>
 
 <!-- How It Works (dark) -->
 <section id="process" class="dark-section">
-  <div class="container section-center">
+  <div class="container">
     <div class="section-tag">HOW IT WORKS</div>
-    <h2 class="section-title">Från idé till <span class="gradient-text">kundflöde</span><br>på fyra enkla steg</h2>
+    <h2 class="section-title">Från idé till <span class="grad-text">kundflöde</span><br>på fyra enkla steg</h2>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">01</div>
@@ -355,30 +380,30 @@
 </section>
 
 <!-- Wave to light -->
-<div class="wave" style="margin-bottom: -1px;">
+<div class="wave" style="margin-bottom:-1px;">
   <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-    <path d="M0,40 C360,140 1080,20 1440,80 L1440,0 L0,0 Z" fill="rgb(16,12,29)"/>
+    <path d="M0,30 C240,60 480,20 720,40 C960,60 1200,20 1440,80 L1440,0 L0,0 Z" fill="rgb(16,12,29)"/>
   </svg>
 </div>
 
 <!-- Services -->
 <section id="services" class="light-section">
-  <div class="container section-center">
+  <div class="container">
     <div class="section-tag" style="color:rgb(103,59,236);border-color:rgba(103,59,236,0.25);">SERVICES</div>
-    <h2 class="section-title">Allt du behöver för att synas och sälja</h2>
+    <h2 class="section-title">Din byrå fick precis ett <span class="grad-text">AI-lyft</span></h2>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon" style="background:linear-gradient(135deg,#EEF2FF,#E0E7FF);">🌐</div>
+        <div class="service-icon" style="background:linear-gradient(135deg,#EEF2FF,#C7D2FE);">🌐</div>
         <h3>Webbsida</h3>
         <p>Modern, mobiloptimerad hemsida byggd för att sälja. Från landningssidor till e-handel.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon" style="background:linear-gradient(135deg,#FEF2F0,#FED7D7);">📈</div>
+        <div class="service-icon" style="background:linear-gradient(135deg,#FEF2F0,#FECACA);">📈</div>
         <h3>Marknadsföring</h3>
         <p>Google Ads, SEO och sociala medier. Kampanjer som ger leads, inte bara visningar.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon" style="background:linear-gradient(135deg,#F0FDF6,#BBF7D0);">🤖</div>
+        <div class="service-icon" style="background:linear-gradient(135deg,#ECFDF5,#A7F3D0);">🤖</div>
         <h3>Smarta System</h3>
         <p>Automation, AI-lösningar och CRM. Sånt som gör att du kan fokusera på affären.</p>
       </div>
@@ -388,9 +413,9 @@
 
 <!-- Pricing -->
 <section id="pricing" class="pricing-section">
-  <div class="container section-center">
+  <div class="container">
     <div class="section-tag" style="color:rgb(103,59,236);border-color:rgba(103,59,236,0.25);">PRICING</div>
-    <h2 class="section-title">Tydliga paket —<br><span class="gradient-text">inga dolda avgifter</span></h2>
+    <h2 class="section-title">Tydliga paket —<br><span class="grad-text">inga dolda avgifter</span></h2>
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="plan">Start</div>
@@ -435,10 +460,10 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- Dark CTA -->
 <section id="contact" class="cta-section">
   <div class="container">
-    <h2>Redo att få ett <span class="gradient-text">stabilt kundflöde</span>?</h2>
+    <h2>Redo att få ett <span class="grad-text">stabilt kundflöde</span>?</h2>
     <p>Join 20,000+ brands producing high-converting campaigns in minutes.</p>
     <a href="mailto:hej@northreach.se" class="btn-primary">Start Free Trial →</a>
   </div>
@@ -446,7 +471,7 @@
 
 <footer>
   <div class="container">
-    <div class="logo">north<span>reach</span></div>
+    <div class="logo-text">north<span style="color:rgb(139,92,246)">reach</span></div>
     <p>©2026 North Reach™ | Stockholm, Sweden</p>
     <a href="mailto:hej@northreach.se">hej@northreach.se</a>
   </div>
