@@ -141,6 +141,7 @@
   .dark-section {
     background: rgb(16, 12, 29); padding: 100px 0;
     text-align: center;
+    margin-top: -1px;
   }
   .section-tag {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -329,21 +330,11 @@
       <a href="#process" class="btn-secondary">How It Works</a>
     </div>
   </div>
+  <!-- Wave to dark — EXACT SVG från creativeos, inuti hero-sektionen -->
+  <svg viewBox="0 0 1440 180" preserveAspectRatio="none" style="display:block;width:100%;height:120px;overflow:hidden;line-height:0;">
+    <path d="M0,86.14 C320,174.23 600,13.88 900,77.50 C1100,126.01 1300,24.26 1440,101.47 L1440,180 L0,180 Z" fill="rgb(16,12,29)"/>
+  </svg>
 </section>
-
-<!-- Wave to dark (valley — filled with hero gradient, extends hero down into dark) -->
-<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" style="display:block;width:100%;height:80px;margin-top:-1px;overflow:hidden;">
-  <defs>
-    <linearGradient id="heroWaveGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="rgb(250,248,255)"/>
-      <stop offset="35%" stop-color="rgb(240,235,255)"/>
-      <stop offset="60%" stop-color="rgb(232,223,255)"/>
-      <stop offset="80%" stop-color="rgb(253,242,248)"/>
-      <stop offset="100%" stop-color="rgb(252,231,243)"/>
-    </linearGradient>
-  </defs>
-  <path d="M0,0 C360,60 1080,60 1440,0 L1440,80 L0,80 Z" fill="url(#heroWaveGrad)"/>
-</svg>
 
 <!-- How It Works (dark) -->
 <section id="process" class="dark-section">
@@ -375,9 +366,9 @@
   </div>
 </section>
 
-<!-- Wave to light (crest — filled with dark color, extends dark down into light) -->
-<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" style="display:block;width:100%;height:80px;margin-bottom:-1px;overflow:hidden;">
-  <path d="M0,80 C360,20 1080,20 1440,80 L1440,0 L0,0 Z" fill="rgb(16,12,29)"/>
+<!-- Wave to light (EXACT SVG från creativeos — dark extends down into light) -->
+<svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="display:block;width:100%;height:80px;margin-bottom:-1px;overflow:hidden;">
+  <path d="M0,60 C360,0 720,120 1080,60 C1260,30 1380,40 1440,60 L1440,0 L0,0 Z" fill="rgb(16,12,29)"/>
 </svg>
 
 <!-- Services -->
