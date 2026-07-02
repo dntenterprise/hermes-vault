@@ -42,11 +42,10 @@
     text-decoration: none;
   }
   .logo-icon {
-    width: 32px; height: 32px; border-radius: 50%;
-    background: linear-gradient(135deg, #7C9AFF, #A855F7, #EC4899);
+    width: 32px; height: 32px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 14px; color: #fff; font-weight: 700;
   }
+  .logo-icon svg { width: 32px; height: 32px; }
   .logo-text {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-size: 20px; font-weight: 800; color: rgb(26,26,26);
@@ -306,7 +305,12 @@
 <header role="banner">
   <div class="header-inner">
     <a href="#" class="logo-wrap">
-      <div class="logo-icon">✦</div>
+      <div class="logo-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="10" cy="20" r="5.5" fill="#7C9AFF"/>
+          <path d="M8 25 L22 7" stroke="#7C9AFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
       <span class="logo-text">north<span style="color:rgb(236,72,153)">reach</span></span>
     </a>
     <div class="nav-links">
