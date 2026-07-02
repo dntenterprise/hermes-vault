@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Reach — Synlighet som ger resultat</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { 
+    font-family: 'DM Sans', system-ui, sans-serif;
+    color: rgb(26, 26, 26); background: rgb(255, 255, 255);
+    line-height: 24px; -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* ===== NAVIGATION ===== */
+  nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .logo { 
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 22px; font-weight: 800; color: rgb(26,26,26);
+    text-decoration: none; letter-spacing: -0.5px;
+  }
+  .logo span { color: rgb(103, 59, 236); }
+  .nav-center { display: flex; align-items: center; gap: 0; }
+  .nav-center a { 
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 14px; font-weight: 600; color: rgb(107,114,128);
+    padding: 8px 16px; text-decoration: none; border-radius: 12px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-center a:hover { color: rgb(26,26,26); background: rgba(0,0,0,0.03); }
+  .nav-right { display: flex; align-items: center; gap: 4px; }
+  .nav-link {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 14px; font-weight: 600; color: rgb(107,114,128);
+    padding: 8px 16px; text-decoration: none; border-radius: 12px;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: rgb(26,26,26); }
+  .nav-cta {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    display: inline-flex; align-items: center;
+    padding: 8px 16px; background: rgb(103, 59, 236); color: rgb(255,255,255) !important;
+    border-radius: 12px; font-size: 14px; font-weight: 600; text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.9; }
+
+  /* ===== HERO (two-column like creativeos) ===== */
+  #hero {
+    padding: 60px 0 200px;
+    background: linear-gradient(rgb(250, 248, 255), rgb(240, 235, 255) 35%, rgb(232, 223, 255), rgb(253, 242, 248) 75%, rgb(252, 231, 243));
+    position: relative; overflow: hidden;
+  }
+  #hero nav {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 80;
+    height: 68px; background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .hero-left { text-align: left; }
+  .hero-tag {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(103,59,236,0.08); color: rgb(103,59,236);
+    padding: 6px 14px; border-radius: 100px; font-size: 12px; font-weight: 700;
+    margin-bottom: 24px; letter-spacing: 0.02em;
+  }
+  .hero h1 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 60px; font-weight: 800; color: rgb(26,26,26);
+    line-height: 66px; letter-spacing: -1.2px; margin-bottom: 24px; max-width: 520px;
+  }
+  .hero h1 span { 
+    background: linear-gradient(135deg, rgb(103,59,236), rgb(233,72,131));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p {
+    font-size: 19px; color: rgb(107,114,128); line-height: 31.35px;
+    margin-bottom: 32px; max-width: 480px;
+  }
+  .hero-buttons { display: flex; gap: 12px; }
+  .btn-primary {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; 
+    background: linear-gradient(92.69deg, rgb(244,139,17) -7.33%, rgb(249,113,59) 6.83%, rgb(245,90,96) 22.12%, rgb(233,72,131) 38.55%, rgb(212,61,164) 56.68%, rgb(183,57,195) 73.67%, rgb(147,57,220) 91.23%, rgb(103,59,236) 105.96%);
+    color: rgb(255,255,255); border-radius: 12px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    box-shadow: rgba(103,59,236,0.3) 0px 4px 20px 0px;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { opacity: 0.92; transform: translateY(-1px); }
+  .btn-secondary {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px; background: rgba(255,255,255,0.7);
+    color: rgb(26,26,26); border-radius: 12px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    border: 1px solid rgb(229,231,235);
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.9); border-color: rgb(200,205,210); }
+
+  /* Hero right — floating stats cards (creativeos-style dashboard replacement) */
+  .hero-right {
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .hero-card {
+    background: rgba(255,255,255,0.75); backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 16px; padding: 24px 28px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+    display: flex; align-items: center; gap: 16px;
+  }
+  .hero-card .num { font-size: 36px; font-weight: 800; color: rgb(103,59,236); font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+  .hero-card .label { font-size: 14px; color: rgb(107,114,128); }
+
+  /* ===== SECTION COMMON ===== */
+  section { padding: 100px 0; }
+  .section-center { text-align: center; }
+  .section-tag {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 12px; font-weight: 700; color: rgb(188,182,253);
+    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px;
+  }
+  .section-tag.purple { color: rgb(103,59,236); }
+  .section-title {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 44px; font-weight: 800; color: rgb(26,26,26);
+    line-height: 52.8px; letter-spacing: -0.44px; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto;
+  }
+  .section-sub {
+    font-size: 17px; color: rgb(107,114,128); line-height: 28.05px;
+    max-width: 550px; margin: -40px auto 48px;
+  }
+
+  /* ===== DARK SECTION (How It Works / Process) ===== */
+  .dark-section {
+    background: rgb(16, 12, 29); 
+    position: relative; overflow: hidden;
+  }
+  .dark-section .section-title { color: rgb(255, 255, 255); }
+  .dark-section .section-sub { color: rgb(149, 161, 184); }
+  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .step-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 24px; padding: 36px 28px; text-align: center;
+  }
+  .step-icon {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 16px; font-weight: 700; background: transparent;
+  }
+  .step-card h3 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 20px; font-weight: 700; color: rgb(255,255,255);
+    margin-bottom: 10px;
+  }
+  .step-card p { font-size: 14px; color: rgb(149,161,184); line-height: 22.4px; }
+
+  /* ===== SERVICES (white cards with border like creativeos AI cards) ===== */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .service-card {
+    background: rgb(255,255,255); border: 1px solid rgb(229,231,235);
+    border-radius: 16px; padding: 28px 24px; text-align: center;
+    transition: box-shadow 0.2s;
+  }
+  .service-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+  .service-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px; font-size: 20px;
+  }
+  .service-card h3 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 16px; font-weight: 700; color: rgb(26,26,26);
+    margin-bottom: 8px;
+  }
+  .service-card p { font-size: 13px; color: rgb(107,114,128); line-height: 21.45px; }
+
+  /* ===== PRICING ===== */
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .pricing-card {
+    background: rgb(255,255,255); border: 1px solid rgb(229,231,235);
+    border-radius: 20px; padding: 28px 24px; position: relative;
+    transition: box-shadow 0.2s;
+  }
+  .pricing-card.featured { 
+    border-color: rgb(103,59,236);
+    box-shadow: rgba(103,59,236,0.12) 0px 4px 24px 0px;
+  }
+  .pricing-card .badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(92.69deg, rgb(244,139,17), rgb(249,113,59), rgb(245,90,96), rgb(233,72,131), rgb(103,59,236));
+    color: #fff; font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.03em;
+    padding: 4px 14px; border-radius: 100px; white-space: nowrap;
+  }
+  .pricing-card .plan {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 20px; font-weight: 700; color: rgb(26,26,26); margin-bottom: 8px;
+  }
+  .pricing-card .price { font-size: 36px; font-weight: 800; color: rgb(26,26,26); margin-bottom: 4px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+  .pricing-card .price span { font-size: 16px; font-weight: 400; color: rgb(107,114,128); }
+  .pricing-card .desc { font-size: 14px; color: rgb(107,114,128); margin-bottom: 24px; line-height: 22px; }
+  .pricing-card ul { list-style: none; margin-bottom: 24px; }
+  .pricing-card ul li {
+    font-size: 14px; color: rgb(75,85,99); padding: 8px 0;
+    border-bottom: 1px solid rgb(243,244,246);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .pricing-card ul li::before { content: '✓'; color: rgb(103,59,236); font-weight: 700; }
+  .btn-pricing {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    display: block; text-align: center; padding: 14px 28px;
+    border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .btn-pricing.outline { border: 2px solid rgb(103,59,236); color: rgb(103,59,236); background: rgb(255,255,255); }
+  .btn-pricing.outline:hover { opacity: 0.8; }
+  .btn-pricing.solid { 
+    background: linear-gradient(92.69deg, rgb(244,139,17), rgb(249,113,59), rgb(245,90,96), rgb(233,72,131), rgb(103,59,236));
+    color: rgb(255,255,255); box-shadow: rgba(103,59,236,0.3) 0px 4px 20px 0px;
+  }
+  .btn-pricing.solid:hover { opacity: 0.92; }
+
+  /* ===== DARK CTA ===== */
+  .cta-section {
+    background: rgb(16, 12, 29); text-align: center; padding: 80px 0;
+  }
+  .cta-section h2 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 44px; font-weight: 800; color: rgb(255,255,255);
+    line-height: 52.8px; letter-spacing: -0.44px; margin-bottom: 16px;
+  }
+  .cta-section p { font-size: 17px; color: rgb(149,161,184); max-width: 480px; margin: 0 auto 36px; line-height: 28.05px; }
+  .cta-section .btn-primary { font-size: 16px; padding: 18px 36px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: rgb(16,12,29); padding: 36px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  footer .container { display: flex; justify-content: space-between; align-items: center; }
+  footer .logo { color: #fff; font-size: 18px; }
+  footer p { color: rgba(255,255,255,0.5); font-size: 13px; }
+  footer a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; }
+  footer a:hover { color: rgba(255,255,255,0.8); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero h1 { font-size: 40px; line-height: 46px; }
+    .hero-right { max-width: 400px; margin: 0 auto; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .services-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-card.featured { transform: none; }
+    .nav-center a, .nav-link { display: none; }
+    .section-title { font-size: 32px; line-height: 38px; }
+    section { padding: 64px 0; }
+    #hero { padding: 140px 0 100px; }
+    footer .container { flex-direction: column; gap: 12px; text-align: center; }
+  }
+  @media (max-width: 600px) {
+    .steps-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero with integrated nav -->
+<section id="hero">
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">north<span>reach</span></a>
+      <div class="nav-center">
+        <a href="#process">How it works</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="nav-link">Login</a>
+        <a href="#contact" class="nav-cta">Start Free</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <div class="hero-tag">✦ Sveriges nya digitala byrå</div>
+      <h1>Ni bygger företaget.<br>Vi bygger <span>kundflödet.</span></h1>
+      <p>En modern hemsida är bara starten. Vi hjälper dig att synas, sälja och växa — med design, annonsering och smarta system.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Boka gratis konsultation →</a>
+        <a href="#process" class="btn-secondary">How It Works</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="num">+127%</div>
+        <div class="label">Genomsnittlig ökning av leads</div>
+      </div>
+      <div class="hero-card">
+        <div class="num">42</div>
+        <div class="label">Nöjda kunder</div>
+      </div>
+      <div class="hero-card">
+        <div class="num">4w</div>
+        <div class="label">Från idé till lansering</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process (dark section — How It Works) -->
+<section id="process" class="dark-section">
+  <div class="container section-center">
+    <div class="section-tag">HOW IT WORKS</div>
+    <h2 class="section-title">Från idé till kundflöde —<br>fyra enkla steg</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-icon" style="color: rgb(59,130,246); border: 2px solid rgba(59,130,246,0.3);">01</div>
+        <h3>Kartlägg</h3>
+        <p>Vi lär känna din verksamhet, dina kunder och din marknad. På en timme har vi en tydlig bild.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon" style="color: rgb(103,59,236); border: 2px solid rgba(103,59,236,0.3);">02</div>
+        <h3>Bygg</h3>
+        <p>Vi bygger din hemsida och startar annonsering — ofta inom två veckor.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon" style="color: rgb(233,72,131); border: 2px solid rgba(233,72,131,0.3);">03</div>
+        <h3>Lansera</h3>
+        <p>Vi lanserar och ser till att du syns direkt. Inga onödiga förseningar.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-icon" style="color: rgb(34,197,94); border: 2px solid rgba(34,197,94,0.3);">04</div>
+        <h3>Optimera</h3>
+        <p>Vi följer upp, testar och förbättrar löpande. Din synlighet ökar varje månad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services (white cards with border) -->
+<section id="services">
+  <div class="container section-center">
+    <div class="section-tag purple">SERVICES</div>
+    <h2 class="section-title">Allt du behöver för att synas och sälja</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" style="background: rgba(103,59,236,0.08);">🌐</div>
+        <h3>Webbsida</h3>
+        <p>Modern, mobiloptimerad hemsida byggd för att sälja. Från landningssidor till e-handel.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background: rgba(233,72,131,0.08);">📈</div>
+        <h3>Marknadsföring</h3>
+        <p>Google Ads, SEO och sociala medier. Kampanjer som ger leads, inte bara visningar.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background: rgba(34,197,94,0.08);">🤖</div>
+        <h3>Smarta System</h3>
+        <p>Automation, AI-lösningar och CRM. Sånt som gör att du kan fokusera på affären.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" style="background: linear-gradient(rgb(255,255,255), rgb(250,248,255));">
+  <div class="container section-center">
+    <div class="section-tag purple">PRICING</div>
+    <h2 class="section-title">Tydliga paket —<br>inga dolda avgifter</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="plan">Start</div>
+        <div class="price">2 990 <span>kr/mån</span></div>
+        <div class="desc">För dig som vill komma igång.</div>
+        <ul>
+          <li>Landningssida (1–3 sidor)</li>
+          <li>Grundläggande SEO</li>
+          <li>Mobilanpassad design</li>
+          <li>E-postsupport</li>
+        </ul>
+        <a href="#contact" class="btn-pricing outline">Start Creating</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="badge">Most Popular</div>
+        <div class="plan">Standard</div>
+        <div class="price">4 990 <span>kr/mån</span></div>
+        <div class="desc">För dig som vill synas och sälja.</div>
+        <ul>
+          <li>Fullständig hemsida (10 sidor)</li>
+          <li>SEO + Google Ads</li>
+          <li>Konverteringsoptimerad design</li>
+          <li>Löpande uppdateringar</li>
+          <li>Månadsrapport</li>
+        </ul>
+        <a href="#contact" class="btn-pricing solid">Start Free Trial</a>
+      </div>
+      <div class="pricing-card">
+        <div class="plan">Premium</div>
+        <div class="price">9 990 <span>kr/mån</span></div>
+        <div class="desc">För dig som vill ha automation.</div>
+        <ul>
+          <li>Allt i Standard</li>
+          <li>Anpassade system</li>
+          <li>CRM-integration</li>
+          <li>AI-assisterad marknadsföring</li>
+          <li>Prioriterad support</li>
+        </ul>
+        <a href="#contact" class="btn-pricing outline">Get Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta-section">
+  <div class="container">
+    <h2>Redo att få ett stabilt kundflöde?</h2>
+    <p>Join 20,000+ brands producing high-converting campaigns in minutes.</p>
+    <a href="mailto:hej@northreach.se" class="btn-primary">Start Free Trial →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="logo">north<span>reach</span></div>
+    <p>©2026 North Reach™ | Stockholm, Sweden | All Rights Reserved</p>
+    <a href="mailto:hej@northreach.se">hej@northreach.se</a>
+  </div>
+</footer>
+
+</body>
+</html>
