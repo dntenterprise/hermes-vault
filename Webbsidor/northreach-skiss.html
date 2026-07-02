@@ -137,10 +137,6 @@
   }
   .btn-secondary:hover { border-color: rgb(200,205,210); }
 
-  /* ===== WAVE (fluid-wave between sections) ===== */
-  .wave { display: block; width: 100%; line-height: 0; overflow: hidden; }
-  .wave svg { display: block; width: 100%; height: 80px; }
-
   /* ===== DARK SECTION ===== */
   .dark-section {
     background: rgb(16, 12, 29); padding: 100px 0;
@@ -335,12 +331,19 @@
   </div>
 </section>
 
-<!-- Wave to dark -->
-<div class="wave" style="margin-top:-1px;">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-    <path d="M0,80 C240,20 480,60 720,40 C960,20 1200,60 1440,30 L1440,80 L0,80 Z" fill="rgb(16,12,29)"/>
-  </svg>
-</div>
+<!-- Wave to dark (valley — filled with hero gradient, extends hero down into dark) -->
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" style="display:block;width:100%;height:80px;margin-top:-1px;overflow:hidden;">
+  <defs>
+    <linearGradient id="heroWaveGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgb(250,248,255)"/>
+      <stop offset="35%" stop-color="rgb(240,235,255)"/>
+      <stop offset="60%" stop-color="rgb(232,223,255)"/>
+      <stop offset="80%" stop-color="rgb(253,242,248)"/>
+      <stop offset="100%" stop-color="rgb(252,231,243)"/>
+    </linearGradient>
+  </defs>
+  <path d="M0,0 C360,60 1080,60 1440,0 L1440,80 L0,80 Z" fill="url(#heroWaveGrad)"/>
+</svg>
 
 <!-- How It Works (dark) -->
 <section id="process" class="dark-section">
@@ -372,12 +375,10 @@
   </div>
 </section>
 
-<!-- Wave to light -->
-<div class="wave" style="margin-bottom:-1px;">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-    <path d="M0,30 C240,60 480,20 720,40 C960,60 1200,20 1440,80 L1440,0 L0,0 Z" fill="rgb(16,12,29)"/>
-  </svg>
-</div>
+<!-- Wave to light (crest — filled with dark color, extends dark down into light) -->
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" style="display:block;width:100%;height:80px;margin-bottom:-1px;overflow:hidden;">
+  <path d="M0,80 C360,20 1080,20 1440,80 L1440,0 L0,0 Z" fill="rgb(16,12,29)"/>
+</svg>
 
 <!-- Services -->
 <section id="services" class="light-section">
