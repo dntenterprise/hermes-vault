@@ -69,7 +69,7 @@
     position: relative;
     overflow: hidden;
   }
-  .hero-inner { max-width: 780px; margin: 60px auto 0; }
+  .hero-inner { max-width: 960px; margin: 60px auto 0; }
   
   #hero h1 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -90,40 +90,80 @@
   #hero p a { color: rgb(103,59,236); text-decoration: underline; }
   .hero-buttons { display: flex; gap: 12px; justify-content: center; }
   .hero-cards {
-    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px;
-    max-width: 700px; margin: 50px auto 0; text-align: center;
+    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px;
+    max-width: 920px; margin: 50px auto 0; text-align: center;
   }
   .hero-card {
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.7);
-    border-radius: 14px; padding: 18px 12px;
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: center;
+    background: rgba(23,23,23,0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    display: flex; justify-content: center; align-items: center;
+    overflow: hidden; position: relative;
+    box-shadow: 0px 0px 3px 1px #00000044;
+    cursor: pointer;
+    min-height: 240px;
+    padding: 4px;
   }
-  .hero-card:hover {
-    transform: translateY(-3px);
-    box-shadow: rgba(124,154,255,0.15) 0px 8px 30px 0px;
+  .hero-card .content {
+    border-radius: 12px;
+    background: #171717;
+    width: 100%; height: 100%;
+    z-index: 1;
+    padding: 28px 18px;
+    color: white;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  .hero-card::before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 400px;
+    background: linear-gradient(135deg, rgb(124,154,255), rgb(168,85,247), rgb(236,72,153));
+    transition: opacity 300ms;
+    animation: rotation_9018 6000ms infinite linear;
+    animation-play-state: paused;
+  }
+  .hero-card:hover::before {
+    opacity: 1;
+    animation-play-state: running;
+  }
+  .hero-card::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%; height: 100%;
+    background: rgba(23,23,23,0.2);
+    backdrop-filter: blur(50px);
   }
   .hero-card .card-icon {
-    width: 28px; height: 28px; margin: 0 auto 10px;
+    width: 36px; height: 36px; margin: 0 auto 14px;
     display: flex; align-items: center; justify-content: center;
   }
   .hero-card .card-icon svg {
-    width: 28px; height: 28px;
+    width: 36px; height: 36px; stroke: #f97316;
   }
-  .hero-card h3 {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
-    background: linear-gradient(135deg, rgb(124,154,255), rgb(168,85,247), rgb(236,72,153));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text; margin: 0 0 6px; line-height: 1.2;
+  .hero-card .content h3 {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+    color: #fff; margin: 0 0 8px; line-height: 1.3;
   }
-  .hero-card p {
-    font-size: 11px; color: rgb(75,85,99); line-height: 16px; margin: 0;
+  .hero-card .content p {
+    font-size: 11px; color: rgba(255,255,255,0.7); line-height: 16px; margin: 0;
+    text-align: center;
   }
-  @media (max-width: 640px) {
-    .hero-cards { grid-template-columns: 1fr; }
+  @keyframes rotation_9018 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @media (max-width: 768px) {
+    .hero-cards { grid-template-columns: 1fr 1fr; gap: 16px; max-width: 500px; }
+  }
+  @media (max-width: 480px) {
+    .hero-cards { grid-template-columns: 1fr; max-width: 300px; }
   }
   .btn-primary {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -342,41 +382,49 @@
     </div>
     <div class="hero-cards">
       <div class="hero-card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2a7 7 0 0 1 7 7c0 2-1 3.5-2 4.5V16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2.5C6 12.5 5 11 5 9a7 7 0 0 1 7-7z"/>
-            <path d="M9 22a3 3 0 0 0 6 0"/>
-          </svg>
+        <div class="content">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a7 7 0 0 1 7 7c0 2-1 3.5-2 4.5V16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2.5C6 12.5 5 11 5 9a7 7 0 0 1 7-7z"/>
+              <path d="M9 22a3 3 0 0 0 6 0"/>
+            </svg>
+          </div>
+          <h3>Skräddarsydda lösningar</h3>
+          <p>Skräddarsydda digitala marknadsföringsstrategier framtagna för att möta ditt företags unika behov och mål – med fokus på maximal effekt och långsiktig framgång.</p>
         </div>
-        <h3>Skräddarsydda lösningar</h3>
-        <p>Skräddarsydda digitala marknadsföringsstrategier framtagna för att möta ditt företags unika behov och mål – med fokus på maximal effekt och långsiktig framgång.</p>
       </div>
       <div class="hero-card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 18l-6-6 3-3 3 3 9-9 3 3-12 12z"/>
-          </svg>
+        <div class="content">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l-6-6 3-3 3 3 9-9 3 3-12 12z"/>
+            </svg>
+          </div>
+          <h3>Resultatbaserad strategi</h3>
+          <p>Datadrivna strategier inom digital marknadsföring med tydligt fokus på mätbara resultat och hög avkastning. Perfekt för företag som vill växa smart och hållbart.</p>
         </div>
-        <h3>Resultatbaserad strategi</h3>
-        <p>Datadrivna strategier inom digital marknadsföring med tydligt fokus på mätbara resultat och hög avkastning. Perfekt för företag som vill växa smart och hållbart.</p>
       </div>
       <div class="hero-card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
-          </svg>
+        <div class="content">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+            </svg>
+          </div>
+          <h3>Kreativa lösningar</h3>
+          <p>Innovativa och visuellt tilltalande kampanjer som fångar målgruppen, stärker ditt varumärke, driver engagemang och bygger digital närvaro med effekt.</p>
         </div>
-        <h3>Kreativa lösningar</h3>
-        <p>Innovativa och visuellt tilltalande kampanjer som fångar målgruppen, stärker ditt varumärke, driver engagemang och bygger digital närvaro med effekt.</p>
       </div>
       <div class="hero-card">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 20h20M6 16V8m4 8V4m4 12v-4m4 4v-8"/>
-          </svg>
+        <div class="content">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20h20M6 16V8m4 8V4m4 12v-4m4 4v-8"/>
+            </svg>
+          </div>
+          <h3>Experter inom digitalt</h3>
+          <p>Ett engagerat team av digitala specialister med rätt erfarenhet, verktyg och strategier för att skapa effektiva kampanjer och växla upp din onlinenärvaro.</p>
         </div>
-        <h3>Experter inom digitalt</h3>
-        <p>Ett engagerat team av digitala specialister med rätt erfarenhet, verktyg och strategier för att skapa effektiva kampanjer och växla upp din onlinenärvaro.</p>
       </div>
     </div>
   </div>
