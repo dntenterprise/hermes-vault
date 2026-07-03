@@ -94,25 +94,52 @@
     max-width: 1040px; margin: 50px auto 0; text-align: center;
   }
   .hero-card {
-    background: rgba(16,12,29,0.85);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 24px;
-    padding: 36px 28px;
+    border-radius: 16px;
+    padding: 24px 18px;
     text-align: center;
+    position: relative;
+    z-index: 0;
+    height: 240px;
+    display: flex; flex-direction: column;
+    justify-content: center;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1.5px;
+    background: linear-gradient(135deg, rgba(124,154,255,0.9), rgba(168,85,247,0.9), rgba(236,72,153,0.9));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  .hero-card .bg-blur {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: -1;
   }
   .hero-card h3 {
     font-size: 24px;
     font-weight: 800;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: #fff;
+    background: linear-gradient(135deg, rgb(124,154,255), rgb(168,85,247), rgb(236,72,153));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin: 0 0 10px;
     line-height: 1.2;
     min-height: 58px;
   }
   .hero-card p {
     font-size: 11px;
-    color: rgba(255,255,255,0.6);
+    color: rgb(75,85,99);
     line-height: 18px;
     margin: 0;
     text-align: center;
@@ -337,18 +364,22 @@
     </div>
     <div class="hero-cards">
       <div class="hero-card">
+        <div class="bg-blur"></div>
         <h3>Skräddarsydda lösningar</h3>
         <p>Skräddarsydda digitala marknadsföringsstrategier framtagna för att möta ditt företags unika behov och mål – med fokus på maximal effekt och långsiktig framgång.</p>
       </div>
       <div class="hero-card">
+        <div class="bg-blur"></div>
         <h3>Resultatbaserad strategi</h3>
         <p>Datadrivna strategier inom digital marknadsföring med tydligt fokus på mätbara resultat och hög avkastning. Perfekt för företag som vill växa smart och hållbart.</p>
       </div>
       <div class="hero-card">
+        <div class="bg-blur"></div>
         <h3>Kreativa lösningar</h3>
         <p>Innovativa och visuellt tilltalande kampanjer som fångar målgruppen, stärker ditt varumärke, driver engagemang och bygger digital närvaro med effekt.</p>
       </div>
       <div class="hero-card">
+        <div class="bg-blur"></div>
         <h3>Experter inom digitalt</h3>
         <p>Ett engagerat team av digitala specialister med rätt erfarenhet, verktyg och strategier för att skapa effektiva kampanjer och växla upp din onlinenärvaro.</p>
       </div>
